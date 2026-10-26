@@ -1,0 +1,1986 @@
+game server on http://localhost:8787
+scanning Apple 0x004C adverts, rssi >= -90 dBm
+[18:45:30.586] Apple audio 0x2030  rssi -40  pod 0x00
+  07 19 01 30 20 15 99 F4 56 00 08  | +16 encrypted
+  (first sighting of this pod)
+  lid: OPEN  count=6   pods=90%/90%  case=n/a
+  status=0b00010101
+
+[18:45:30.889] Apple audio 0x2030  rssi -31  pod 0x60
+  07 19 01 30 20 75 99 F4 56 00 08  | +16 encrypted
+  (first sighting of this pod)
+  lid: OPEN  count=6   pods=90%/90%  case=n/a
+  status=0b01110101
+
+debug  adverts=81 withMfgData=44 apple=23 type07=8 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x10=14 0x07=8 0x12=1
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=152 withMfgData=83 apple=49 type07=15 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x10=32 0x07=15 0x12=2
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=225 withMfgData=122 apple=75 type07=24 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x10=49 0x07=24 0x12=2
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=295 withMfgData=163 apple=98 type07=27 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x10=69 0x07=27 0x12=2
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=365 withMfgData=203 apple=119 type07=30 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x10=87 0x07=30 0x12=2
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+[18:45:48.215] Apple audio 0x2030  rssi -34  pod 0x00
+  07 19 01 30 20 15 A9 F4 56 00 08  | +16 encrypted
+  CHANGED: [6] 99->A9
+  lid: OPEN  count=6   pods=100%/90%  case=n/a
+  status=0b00010101
+
+[18:45:48.515] Apple audio 0x2030  rssi -42  pod 0x60
+  07 19 01 30 20 75 9A F4 56 00 08  | +16 encrypted
+  CHANGED: [6] 99->9A
+  lid: OPEN  count=6   pods=90%/100%  case=n/a
+  status=0b01110101
+
+debug  adverts=438 withMfgData=252 apple=147 type07=37 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x10=106 0x07=37 0x12=4
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:45:49.122  LID CLOSED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #1)
+[18:45:49.124] Apple audio 0x2030  rssi -42  pod 0x60
+  07 19 01 30 20 75 9A F4 5E 00 08  | +16 encrypted
+  CHANGED: [8] 56->5E
+  lid: CLOSED  count=6   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:45:49.369  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #2)
+[18:45:49.369] Apple audio 0x2030  rssi -41  pod 0x00
+  07 19 01 30 20 15 A9 F4 57 00 08  | +16 encrypted
+  CHANGED: [8] 56->57
+  lid: OPEN  count=7   pods=100%/90%  case=n/a
+  status=0b00010101
+
+[18:45:49.375] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 57 00 08  | +16 encrypted
+  CHANGED: [8] 5E->57
+  lid: OPEN  count=7   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:45:50.566  LID CLOSED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #3)
+[18:45:50.566] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 15 A9 F4 5F 00 08  | +16 encrypted
+  CHANGED: [8] 57->5F
+  lid: CLOSED  count=7   pods=100%/90%  case=n/a
+  status=0b00010101
+
+[18:45:50.594] Apple audio 0x2030  rssi -46  pod 0x60
+  07 19 01 30 20 75 9A F4 5F 00 08  | +16 encrypted
+  CHANGED: [8] 57->5F
+  lid: CLOSED  count=7   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:45:51.476  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #4)
+[18:45:51.478] Apple audio 0x2030  rssi -39  pod 0x60
+  07 19 01 30 20 75 9A F4 50 00 08  | +16 encrypted
+  CHANGED: [8] 5F->50
+  lid: OPEN  count=0   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:45:51.485] Apple audio 0x2030  rssi -35  pod 0x00
+  07 19 01 30 20 15 A9 F4 50 00 08  | +16 encrypted
+  CHANGED: [8] 5F->50
+  lid: OPEN  count=0   pods=100%/90%  case=n/a
+  status=0b00010101
+
+debug  adverts=532 withMfgData=322 apple=198 type07=70 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x10=122 0x07=70 0x12=6
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:45:51.759  LID CLOSED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #5)
+[18:45:51.759] Apple audio 0x2030  rssi -38  pod 0x00
+  07 19 01 30 20 15 A9 F4 58 00 08  | +16 encrypted
+  CHANGED: [8] 50->58
+  lid: CLOSED  count=0   pods=100%/90%  case=n/a
+  status=0b00010101
+
+[18:45:51.772] Apple audio 0x2030  rssi -39  pod 0x60
+  07 19 01 30 20 75 9A F4 58 00 08  | +16 encrypted
+  CHANGED: [8] 50->58
+  lid: CLOSED  count=0   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:45:52.060  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #6)
+[18:45:52.060] Apple audio 0x2030  rssi -40  pod 0x00
+  07 19 01 30 20 15 A9 F4 51 00 08  | +16 encrypted
+  CHANGED: [8] 58->51
+  lid: OPEN  count=1   pods=100%/90%  case=n/a
+  status=0b00010101
+
+[18:45:52.075] Apple audio 0x2030  rssi -42  pod 0x60
+  07 19 01 30 20 75 9A F4 51 00 08  | +16 encrypted
+  CHANGED: [8] 58->51
+  lid: OPEN  count=1   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:45:52.671  LID CLOSED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #7)
+[18:45:52.671] Apple audio 0x2030  rssi -39  pod 0x60
+  07 19 01 30 20 75 9A F4 59 00 08  | +16 encrypted
+  CHANGED: [8] 51->59
+  lid: CLOSED  count=1   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:45:52.691] Apple audio 0x2030  rssi -38  pod 0x00
+  07 19 01 30 20 15 A9 F4 59 00 08  | +16 encrypted
+  CHANGED: [8] 51->59
+  lid: CLOSED  count=1   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:45:53.567  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #8)
+[18:45:53.568] Apple audio 0x2030  rssi -39  pod 0x60
+  07 19 01 30 20 75 9A F4 52 00 08  | +16 encrypted
+  CHANGED: [8] 59->52
+  lid: OPEN  count=2   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:45:53.572] Apple audio 0x2030  rssi -36  pod 0x00
+  07 19 01 30 20 15 A9 F4 52 00 08  | +16 encrypted
+  CHANGED: [8] 59->52
+  lid: OPEN  count=2   pods=100%/90%  case=n/a
+  status=0b00010101
+
+debug  adverts=634 withMfgData=394 apple=253 type07=110 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x10=136 0x07=110 0x12=7
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:45:55.083  LID CLOSED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #9)
+[18:45:55.084] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 5A 00 08  | +16 encrypted
+  CHANGED: [8] 52->5A
+  lid: CLOSED  count=2   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:45:55.090] Apple audio 0x2030  rssi -40  pod 0x00
+  07 19 01 30 20 15 A9 F4 5A 00 08  | +16 encrypted
+  CHANGED: [8] 52->5A
+  lid: CLOSED  count=2   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:45:55.661  LID OPENED   [8]=0x53 count=3 closed=false  (Apple audio 0x2030, event #10)
+[18:45:55.661] Apple audio 0x2030  rssi -39  pod 0x60
+  07 19 01 30 20 75 9A F4 53 00 08  | +16 encrypted
+  CHANGED: [8] 5A->53
+  lid: OPEN  count=3   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:45:55.695] Apple audio 0x2030  rssi -36  pod 0x00
+  07 19 01 30 20 15 A9 F4 53 00 08  | +16 encrypted
+  CHANGED: [8] 5A->53
+  lid: OPEN  count=3   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:45:56.010  LID CLOSED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #11)
+[18:45:56.010] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 5B 00 08  | +16 encrypted
+  CHANGED: [8] 53->5B
+  lid: CLOSED  count=3   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:45:56.159] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 15 A9 F4 5B 00 08  | +16 encrypted
+  CHANGED: [8] 53->5B
+  lid: CLOSED  count=3   pods=100%/90%  case=n/a
+  status=0b00010101
+
+debug  adverts=807 withMfgData=518 apple=344 type07=169 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=169 0x10=166 0x12=9
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:45:57.727  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #12)
+[18:45:57.727] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 54 00 08  | +16 encrypted
+  CHANGED: [8] 5B->54
+  lid: OPEN  count=4   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:45:57.784] Apple audio 0x2030  rssi -36  pod 0x00
+  07 19 01 30 20 15 A9 F4 54 00 08  | +16 encrypted
+  CHANGED: [8] 5B->54
+  lid: OPEN  count=4   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:45:58.860  LID CLOSED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #13)
+[18:45:58.861] Apple audio 0x2030  rssi -40  pod 0x60
+  07 19 01 30 20 75 9A F4 5C 00 08  | +16 encrypted
+  CHANGED: [8] 54->5C
+  lid: CLOSED  count=4   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:45:58.876  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #14)
+>>> 18:45:58.920  LID CLOSED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #15)
+[18:45:58.926] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 15 A9 F4 5C 00 08  | +16 encrypted
+  CHANGED: [8] 54->5C
+  lid: CLOSED  count=4   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:00.312  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #16)
+[18:46:00.312] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 15 A9 F4 55 00 08  | +16 encrypted
+  CHANGED: [8] 5C->55
+  lid: OPEN  count=5   pods=100%/90%  case=n/a
+  status=0b00010101
+
+[18:46:00.346] Apple audio 0x2030  rssi -44  pod 0x60
+  07 19 01 30 20 75 9A F4 55 00 08  | +16 encrypted
+  CHANGED: [8] 5C->55
+  lid: OPEN  count=5   pods=90%/100%  case=n/a
+  status=0b01110101
+
+debug  adverts=1059 withMfgData=708 apple=482 type07=271 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=271 0x10=200 0x12=11
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:00.787  LID CLOSED   [8]=0x5D count=5 closed=true  (Apple audio 0x2030, event #17)
+[18:46:00.788] Apple audio 0x2030  rssi -50  pod 0x60
+  07 19 01 30 20 75 9A F4 5D 00 08  | +16 encrypted
+  CHANGED: [8] 55->5D
+  lid: CLOSED  count=5   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:46:00.830] Apple audio 0x2030  rssi -36  pod 0x00
+  07 19 01 30 20 15 A9 F4 5D 00 08  | +16 encrypted
+  CHANGED: [8] 55->5D
+  lid: CLOSED  count=5   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:01.122  LID OPENED   [8]=0x56 count=6 closed=false  (Apple audio 0x2030, event #18)
+[18:46:01.122] Apple audio 0x2030  rssi -44  pod 0x00
+  07 19 01 30 20 15 A9 F4 56 00 08  | +16 encrypted
+  CHANGED: [8] 5D->56
+  lid: OPEN  count=6   pods=100%/90%  case=n/a
+  status=0b00010101
+
+[18:46:01.182] Apple audio 0x2030  rssi -42  pod 0x60
+  07 19 01 30 20 75 9A F4 56 00 08  | +16 encrypted
+  CHANGED: [8] 5D->56
+  lid: OPEN  count=6   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:01.500  LID CLOSED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #19)
+[18:46:01.501] Apple audio 0x2030  rssi -49  pod 0x60
+  07 19 01 30 20 75 9A F4 5E 00 08  | +16 encrypted
+  CHANGED: [8] 56->5E
+  lid: CLOSED  count=6   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:46:01.551] Apple audio 0x2030  rssi -36  pod 0x00
+  07 19 01 30 20 15 A9 F4 5E 00 08  | +16 encrypted
+  CHANGED: [8] 56->5E
+  lid: CLOSED  count=6   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:01.930  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #20)
+[18:46:01.930] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 15 A9 F4 57 00 08  | +16 encrypted
+  CHANGED: [8] 5E->57
+  lid: OPEN  count=7   pods=100%/90%  case=n/a
+  status=0b00010101
+
+[18:46:01.941] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 57 00 08  | +16 encrypted
+  CHANGED: [8] 5E->57
+  lid: OPEN  count=7   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:02.339  LID CLOSED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #21)
+[18:46:02.339] Apple audio 0x2030  rssi -43  pod 0x60
+  07 19 01 30 20 75 9A F4 5F 00 08  | +16 encrypted
+  CHANGED: [8] 57->5F
+  lid: CLOSED  count=7   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:02.403  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #22)
+>>> 18:46:02.459  LID CLOSED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #23)
+>>> 18:46:02.530  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #24)
+>>> 18:46:02.569  LID CLOSED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #25)
+>>> 18:46:02.584  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #26)
+>>> 18:46:02.594  LID CLOSED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #27)
+>>> 18:46:02.632  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #28)
+>>> 18:46:02.706  LID CLOSED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #29)
+[18:46:02.706] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 15 A9 F4 5F 00 08  | +16 encrypted
+  CHANGED: [8] 57->5F
+  lid: CLOSED  count=7   pods=100%/90%  case=n/a
+  status=0b00010101
+
+debug  adverts=1316 withMfgData=893 apple=623 type07=374 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=374 0x10=235 0x12=14
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:03.968  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #30)
+[18:46:03.968] Apple audio 0x2030  rssi -38  pod 0x00
+  07 19 01 30 20 15 A9 F4 50 00 08  | +16 encrypted
+  CHANGED: [8] 5F->50
+  lid: OPEN  count=0   pods=100%/90%  case=n/a
+  status=0b00010101
+
+[18:46:03.977] Apple audio 0x2030  rssi -44  pod 0x60
+  07 19 01 30 20 75 9A F4 50 00 08  | +16 encrypted
+  CHANGED: [8] 5F->50
+  lid: OPEN  count=0   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:04.261  LID CLOSED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #31)
+[18:46:04.262] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 58 00 08  | +16 encrypted
+  CHANGED: [8] 50->58
+  lid: CLOSED  count=0   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:04.314  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #32)
+>>> 18:46:04.363  LID CLOSED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #33)
+[18:46:04.391] Apple audio 0x2030  rssi -43  pod 0x00
+  07 19 01 30 20 15 A9 F4 58 00 08  | +16 encrypted
+  CHANGED: [8] 50->58
+  lid: CLOSED  count=0   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:04.739  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #34)
+[18:46:04.739] Apple audio 0x2030  rssi -52  pod 0x60
+  07 19 01 30 20 75 9A F4 51 00 08  | +16 encrypted
+  CHANGED: [8] 58->51
+  lid: OPEN  count=1   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:04.788  LID CLOSED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #35)
+>>> 18:46:04.844  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #36)
+[18:46:04.844] Apple audio 0x2030  rssi -38  pod 0x00
+  07 19 01 30 20 15 A9 F4 51 00 08  | +16 encrypted
+  CHANGED: [8] 58->51
+  lid: OPEN  count=1   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:05.664  LID CLOSED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #37)
+[18:46:05.665] Apple audio 0x2030  rssi -47  pod 0x60
+  07 19 01 30 20 75 9A F4 59 00 08  | +16 encrypted
+  CHANGED: [8] 51->59
+  lid: CLOSED  count=1   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:46:05.679] Apple audio 0x2030  rssi -36  pod 0x00
+  07 19 01 30 20 15 A9 F4 59 00 08  | +16 encrypted
+  CHANGED: [8] 51->59
+  lid: CLOSED  count=1   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:05.979  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #38)
+[18:46:05.980] Apple audio 0x2030  rssi -50  pod 0x60
+  07 19 01 30 20 75 9A F4 52 00 08  | +16 encrypted
+  CHANGED: [8] 59->52
+  lid: OPEN  count=2   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:46:06.034] Apple audio 0x2030  rssi -44  pod 0x00
+  07 19 01 30 20 15 A9 F4 52 00 08  | +16 encrypted
+  CHANGED: [8] 59->52
+  lid: OPEN  count=2   pods=100%/90%  case=n/a
+  status=0b00010101
+
+debug  adverts=1557 withMfgData=1073 apple=753 type07=455 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=455 0x10=281 0x12=17
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:06.766  LID CLOSED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #39)
+[18:46:06.766] Apple audio 0x2030  rssi -35  pod 0x00
+  07 19 01 30 20 15 A9 F4 5A 00 08  | +16 encrypted
+  CHANGED: [8] 52->5A
+  lid: CLOSED  count=2   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:06.781  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #40)
+>>> 18:46:06.825  LID CLOSED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #41)
+[18:46:06.956] Apple audio 0x2030  rssi -39  pod 0x60
+  07 19 01 30 20 75 9A F4 5A 00 08  | +16 encrypted
+  CHANGED: [8] 52->5A
+  lid: CLOSED  count=2   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:07.912  LID OPENED   [8]=0x53 count=3 closed=false  (Apple audio 0x2030, event #42)
+[18:46:07.912] Apple audio 0x2030  rssi -54  pod 0x60
+  07 19 01 30 20 75 9A F4 53 00 08  | +16 encrypted
+  CHANGED: [8] 5A->53
+  lid: OPEN  count=3   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:46:07.919] Apple audio 0x2030  rssi -40  pod 0x00
+  07 19 01 30 20 15 A9 F4 53 00 08  | +16 encrypted
+  CHANGED: [8] 5A->53
+  lid: OPEN  count=3   pods=100%/90%  case=n/a
+  status=0b00010101
+
+debug  adverts=1806 withMfgData=1258 apple=890 type07=552 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=552 0x10=319 0x12=19
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:10.972  LID CLOSED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #43)
+[18:46:10.976] Apple audio 0x2030  rssi -52  pod 0x60
+  07 19 01 30 20 75 9A F4 5B 00 08  | +16 encrypted
+  CHANGED: [8] 53->5B
+  lid: CLOSED  count=3   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:46:10.983] Apple audio 0x2030  rssi -42  pod 0x00
+  07 19 01 30 20 15 A9 F4 5B 00 08  | +16 encrypted
+  CHANGED: [8] 53->5B
+  lid: CLOSED  count=3   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:11.481  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #44)
+[18:46:11.481] Apple audio 0x2030  rssi -43  pod 0x60
+  07 19 01 30 20 75 9A F4 54 00 08  | +16 encrypted
+  CHANGED: [8] 5B->54
+  lid: OPEN  count=4   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:46:11.766] Apple audio 0x2030  rssi -39  pod 0x00
+  07 19 01 30 20 15 A9 F4 54 00 0C  | +16 encrypted
+  CHANGED: [8] 5B->54  [10] 08->0C
+  lid: OPEN  count=4   pods=100%/90%  case=n/a
+  status=0b00010101
+
+[18:46:11.772] Apple audio 0x2030  rssi -47  pod 0x60
+  07 19 01 30 20 75 9A F4 54 00 0C  | +16 encrypted
+  CHANGED: [10] 08->0C
+  lid: OPEN  count=4   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:12.053  LID CLOSED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #45)
+[18:46:12.053] Apple audio 0x2030  rssi -39  pod 0x00
+  07 19 01 30 20 15 A9 F4 5C 00 08  | +16 encrypted
+  CHANGED: [8] 54->5C  [10] 0C->08
+  lid: CLOSED  count=4   pods=100%/90%  case=n/a
+  status=0b00010101
+
+[18:46:12.099] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 5C 00 08  | +16 encrypted
+  CHANGED: [8] 54->5C  [10] 0C->08
+  lid: CLOSED  count=4   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:12.360  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #46)
+[18:46:12.360] Apple audio 0x2030  rssi -43  pod 0x60
+  07 19 01 30 20 75 9A F4 55 00 08  | +16 encrypted
+  CHANGED: [8] 5C->55
+  lid: OPEN  count=5   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:46:12.387] Apple audio 0x2030  rssi -40  pod 0x00
+  07 19 01 30 20 15 A9 F4 55 00 08  | +16 encrypted
+  CHANGED: [8] 5C->55
+  lid: OPEN  count=5   pods=100%/90%  case=n/a
+  status=0b00010101
+
+debug  adverts=1988 withMfgData=1395 apple=1001 type07=619 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=619 0x10=357 0x12=25
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:12.956  LID CLOSED   [8]=0x5D count=5 closed=true  (Apple audio 0x2030, event #47)
+[18:46:12.956] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 5D 00 08  | +16 encrypted
+  CHANGED: [8] 55->5D
+  lid: CLOSED  count=5   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:46:12.983] Apple audio 0x2030  rssi -38  pod 0x00
+  07 19 01 30 20 15 A9 F4 5D 00 08  | +16 encrypted
+  CHANGED: [8] 55->5D
+  lid: CLOSED  count=5   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:14.427  LID OPENED   [8]=0x56 count=6 closed=false  (Apple audio 0x2030, event #48)
+[18:46:14.427] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 56 00 08  | +16 encrypted
+  CHANGED: [8] 5D->56
+  lid: OPEN  count=6   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:46:14.439] Apple audio 0x2030  rssi -41  pod 0x00
+  07 19 01 30 20 15 A9 F4 56 00 08  | +16 encrypted
+  CHANGED: [8] 5D->56
+  lid: OPEN  count=6   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:15.329  LID CLOSED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #49)
+[18:46:15.329] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 5E 00 08  | +16 encrypted
+  CHANGED: [8] 56->5E
+  lid: CLOSED  count=6   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:15.330  LID OPENED   [8]=0x56 count=6 closed=false  (Apple audio 0x2030, event #50)
+debug  adverts=2091 withMfgData=1467 apple=1057 type07=661 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=661 0x10=371 0x12=25
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:15.605  LID CLOSED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #51)
+[18:46:15.605] Apple audio 0x2030  rssi -40  pod 0x00
+  07 19 01 30 20 15 A9 F4 5E 00 08  | +16 encrypted
+  CHANGED: [8] 56->5E
+  lid: CLOSED  count=6   pods=100%/90%  case=n/a
+  status=0b00010101
+
+debug  adverts=2194 withMfgData=1544 apple=1115 type07=705 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=705 0x10=383 0x12=27
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+[18:46:19.503] Apple audio 0x2030  rssi -43  pod 0x00
+  07 19 01 30 20 14 A9 F4 5E 00 08  | +16 encrypted
+  CHANGED: [5] 15->14
+  lid: CLOSED  count=6   pods=100%/90%  case=n/a
+  status=0b00010100
+
+debug  adverts=2289 withMfgData=1605 apple=1158 type07=729 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=729 0x10=402 0x12=27
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:21.601  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #52)
+[18:46:21.601] Apple audio 0x2030  rssi -35  pod 0x00
+  07 19 01 30 20 04 F9 D4 57 00 08  | +16 encrypted
+  CHANGED: [5] 14->04  [6] A9->F9  [7] F4->D4  [8] 5E->57
+  lid: OPEN  count=7   pods=n/a/90%  case=130%
+  status=0b00000100
+
+>>> 18:46:22.215  LID CLOSED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #53)
+[18:46:22.216] Apple audio 0x2030  rssi -43  pod 0x00
+  07 19 01 30 20 04 F9 D4 5F 00 08  | +16 encrypted
+  CHANGED: [8] 57->5F
+  lid: CLOSED  count=7   pods=n/a/90%  case=130%
+  status=0b00000100
+
+>>> 18:46:22.527  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #54)
+[18:46:22.528] Apple audio 0x2030  rssi -36  pod 0x00
+  07 19 01 30 20 04 F9 D4 50 00 08  | +16 encrypted
+  CHANGED: [8] 5F->50
+  lid: OPEN  count=0   pods=n/a/90%  case=130%
+  status=0b00000100
+
+>>> 18:46:23.414  LID CLOSED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #55)
+[18:46:23.414] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 14 A9 F4 58 00 08  | +16 encrypted
+  CHANGED: [5] 04->14  [6] F9->A9  [7] D4->F4  [8] 50->58
+  lid: CLOSED  count=0   pods=100%/90%  case=n/a
+  status=0b00010100
+
+debug  adverts=2379 withMfgData=1665 apple=1198 type07=752 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=752 0x10=416 0x12=30
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:27.021  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #56)
+[18:46:27.022] Apple audio 0x2030  rssi -35  pod 0x00
+  07 19 01 30 20 14 A9 F4 51 00 08  | +16 encrypted
+  CHANGED: [8] 58->51
+  lid: OPEN  count=1   pods=100%/90%  case=n/a
+  status=0b00010100
+
+debug  adverts=2459 withMfgData=1720 apple=1236 type07=769 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=769 0x10=436 0x12=31
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:27.904  LID CLOSED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #57)
+[18:46:27.905] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 5A 00 08  | +16 encrypted
+  CHANGED: [8] 5E->5A
+  lid: CLOSED  count=2   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:27.921  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #58)
+[18:46:27.921] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 15 A9 F4 59 00 08  | +16 encrypted
+  CHANGED: [5] 14->15  [8] 51->59
+  lid: CLOSED  count=1   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:27.929  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #59)
+>>> 18:46:27.944  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #60)
+>>> 18:46:27.956  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #61)
+>>> 18:46:28.216  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #62)
+>>> 18:46:28.223  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #63)
+>>> 18:46:28.510  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #64)
+[18:46:28.510] Apple audio 0x2030  rssi -42  pod 0x00
+  07 19 01 30 20 15 A9 F4 52 00 08  | +16 encrypted
+  CHANGED: [8] 59->52
+  lid: OPEN  count=2   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:28.513  LID OPENED   [8]=0x53 count=3 closed=false  (Apple audio 0x2030, event #65)
+[18:46:28.514] Apple audio 0x2030  rssi -45  pod 0x60
+  07 19 01 30 20 75 9A F4 53 00 08  | +16 encrypted
+  CHANGED: [8] 5A->53
+  lid: OPEN  count=3   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:28.538  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #66)
+>>> 18:46:28.562  LID OPENED   [8]=0x53 count=3 closed=false  (Apple audio 0x2030, event #67)
+>>> 18:46:28.803  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #68)
+>>> 18:46:28.833  LID OPENED   [8]=0x53 count=3 closed=false  (Apple audio 0x2030, event #69)
+>>> 18:46:28.843  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #70)
+>>> 18:46:28.862  LID OPENED   [8]=0x53 count=3 closed=false  (Apple audio 0x2030, event #71)
+>>> 18:46:29.112  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #72)
+>>> 18:46:29.160  LID OPENED   [8]=0x53 count=3 closed=false  (Apple audio 0x2030, event #73)
+>>> 18:46:29.163  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #74)
+>>> 18:46:29.400  LID CLOSED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #75)
+[18:46:29.401] Apple audio 0x2030  rssi -43  pod 0x00
+  07 19 01 30 20 15 A9 F4 5A 00 08  | +16 encrypted
+  CHANGED: [8] 52->5A
+  lid: CLOSED  count=2   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:29.410  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #76)
+[18:46:29.410] Apple audio 0x2030  rssi -48  pod 0x60
+  07 19 01 30 20 75 9A F4 5B 00 08  | +16 encrypted
+  CHANGED: [8] 53->5B
+  lid: CLOSED  count=3   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:29.437  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #77)
+>>> 18:46:29.719  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #78)
+>>> 18:46:29.725  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #79)
+>>> 18:46:29.740  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #80)
+>>> 18:46:29.749  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #81)
+>>> 18:46:30.001  LID OPENED   [8]=0x53 count=3 closed=false  (Apple audio 0x2030, event #82)
+[18:46:30.001] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 15 A9 F4 53 00 08  | +16 encrypted
+  CHANGED: [8] 5A->53
+  lid: OPEN  count=3   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:30.014  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #83)
+[18:46:30.015] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 54 00 08  | +16 encrypted
+  CHANGED: [8] 5B->54
+  lid: OPEN  count=4   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:30.027  LID OPENED   [8]=0x53 count=3 closed=false  (Apple audio 0x2030, event #84)
+>>> 18:46:30.036  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #85)
+>>> 18:46:30.314  LID OPENED   [8]=0x53 count=3 closed=false  (Apple audio 0x2030, event #86)
+>>> 18:46:30.319  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #87)
+>>> 18:46:30.344  LID OPENED   [8]=0x53 count=3 closed=false  (Apple audio 0x2030, event #88)
+>>> 18:46:30.344  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #89)
+debug  adverts=2571 withMfgData=1798 apple=1297 type07=812 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=812 0x10=451 0x12=34
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:30.614  LID CLOSED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #90)
+[18:46:30.615] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 5C 00 08  | +16 encrypted
+  CHANGED: [8] 54->5C
+  lid: CLOSED  count=4   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:30.616  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #91)
+[18:46:30.616] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 15 A9 F4 5B 00 08  | +16 encrypted
+  CHANGED: [8] 53->5B
+  lid: CLOSED  count=3   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:30.665  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #92)
+>>> 18:46:30.918  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #93)
+[18:46:30.918] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 15 A9 F4 54 00 08  | +16 encrypted
+  CHANGED: [8] 5B->54
+  lid: OPEN  count=4   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:30.956  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #94)
+[18:46:30.958] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 55 00 08  | +16 encrypted
+  CHANGED: [8] 5C->55
+  lid: OPEN  count=5   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:31.214  LID CLOSED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #95)
+[18:46:31.214] Apple audio 0x2030  rssi -43  pod 0x00
+  07 19 01 30 20 15 A9 F4 5C 00 08  | +16 encrypted
+  CHANGED: [8] 54->5C
+  lid: CLOSED  count=4   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:31.218  LID OPENED   [8]=0x5D count=5 closed=true  (Apple audio 0x2030, event #96)
+[18:46:31.218] Apple audio 0x2030  rssi -48  pod 0x60
+  07 19 01 30 20 75 9A F4 5D 00 08  | +16 encrypted
+  CHANGED: [8] 55->5D
+  lid: CLOSED  count=5   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:31.254  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #97)
+>>> 18:46:31.503  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #98)
+[18:46:31.504] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 15 A9 F4 55 00 08  | +16 encrypted
+  CHANGED: [8] 5C->55
+  lid: OPEN  count=5   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:31.509  LID OPENED   [8]=0x56 count=6 closed=false  (Apple audio 0x2030, event #99)
+[18:46:31.509] Apple audio 0x2030  rssi -39  pod 0x60
+  07 19 01 30 20 75 9A F4 56 00 08  | +16 encrypted
+  CHANGED: [8] 5D->56
+  lid: OPEN  count=6   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:31.526  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #100)
+>>> 18:46:31.532  LID OPENED   [8]=0x56 count=6 closed=false  (Apple audio 0x2030, event #101)
+>>> 18:46:31.818  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #102)
+>>> 18:46:31.818  LID OPENED   [8]=0x56 count=6 closed=false  (Apple audio 0x2030, event #103)
+>>> 18:46:31.857  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #104)
+>>> 18:46:31.859  LID CLOSED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #105)
+[18:46:31.859] Apple audio 0x2030  rssi -43  pod 0x60
+  07 19 01 30 20 75 9A F4 5E 00 08  | +16 encrypted
+  CHANGED: [8] 56->5E
+  lid: CLOSED  count=6   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:32.431  LID OPENED   [8]=0x56 count=6 closed=false  (Apple audio 0x2030, event #106)
+[18:46:32.431] Apple audio 0x2030  rssi -36  pod 0x00
+  07 19 01 30 20 15 A9 F4 56 00 08  | +16 encrypted
+  CHANGED: [8] 55->56
+  lid: OPEN  count=6   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:32.713  LID CLOSED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #107)
+[18:46:32.713] Apple audio 0x2030  rssi -42  pod 0x60
+  07 19 01 30 20 75 9A F4 5F 00 08  | +16 encrypted
+  CHANGED: [8] 5E->5F
+  lid: CLOSED  count=7   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:32.717  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #108)
+[18:46:32.717] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 15 A9 F4 5E 00 08  | +16 encrypted
+  CHANGED: [8] 56->5E
+  lid: CLOSED  count=6   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:32.734  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #109)
+>>> 18:46:32.742  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #110)
+>>> 18:46:32.756  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #111)
+>>> 18:46:32.763  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #112)
+>>> 18:46:33.011  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #113)
+>>> 18:46:33.043  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #114)
+>>> 18:46:33.059  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #115)
+>>> 18:46:33.064  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #116)
+>>> 18:46:33.316  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #117)
+[18:46:33.316] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 15 A9 F4 57 00 08  | +16 encrypted
+  CHANGED: [8] 5E->57
+  lid: OPEN  count=7   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:33.319  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #118)
+[18:46:33.319] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 50 00 08  | +16 encrypted
+  CHANGED: [8] 5F->50
+  lid: OPEN  count=0   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:33.338  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #119)
+>>> 18:46:33.346  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #120)
+>>> 18:46:33.367  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #121)
+debug  adverts=2675 withMfgData=1874 apple=1359 type07=854 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=854 0x10=470 0x12=35
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:33.621  LID CLOSED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #122)
+[18:46:33.621] Apple audio 0x2030  rssi -38  pod 0x00
+  07 19 01 30 20 15 A9 F4 5F 00 08  | +16 encrypted
+  CHANGED: [8] 57->5F
+  lid: CLOSED  count=7   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:33.646  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #123)
+[18:46:33.647] Apple audio 0x2030  rssi -42  pod 0x60
+  07 19 01 30 20 75 9A F4 58 00 08  | +16 encrypted
+  CHANGED: [8] 50->58
+  lid: CLOSED  count=0   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:33.810  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #124)
+[18:46:33.810] Apple audio 0x2030  rssi -39  pod 0x00
+  07 19 01 30 20 15 A9 F4 50 00 08  | +16 encrypted
+  CHANGED: [8] 5F->50
+  lid: OPEN  count=0   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:34.056  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #125)
+[18:46:34.056] Apple audio 0x2030  rssi -43  pod 0x60
+  07 19 01 30 20 75 9A F4 51 00 08  | +16 encrypted
+  CHANGED: [8] 58->51
+  lid: OPEN  count=1   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:34.114  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #126)
+>>> 18:46:34.368  LID CLOSED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #127)
+[18:46:34.368] Apple audio 0x2030  rssi -49  pod 0x60
+  07 19 01 30 20 75 9A F4 59 00 08  | +16 encrypted
+  CHANGED: [8] 51->59
+  lid: CLOSED  count=1   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:34.375  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #128)
+[18:46:34.375] Apple audio 0x2030  rssi -45  pod 0x00
+  07 19 01 30 20 15 A9 F4 58 00 08  | +16 encrypted
+  CHANGED: [8] 50->58
+  lid: CLOSED  count=0   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:34.388  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #129)
+[18:46:34.388] Apple audio 0x2030  rssi -49  pod 0x60
+  07 19 01 30 20 75 9A F4 52 00 08  | +16 encrypted
+  CHANGED: [8] 59->52
+  lid: OPEN  count=2   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:34.396  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #130)
+[18:46:34.396] Apple audio 0x2030  rssi -45  pod 0x00
+  07 19 01 30 20 15 A9 F4 51 00 08  | +16 encrypted
+  CHANGED: [8] 58->51
+  lid: OPEN  count=1   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:34.417  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #131)
+>>> 18:46:34.663  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #132)
+>>> 18:46:34.682  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #133)
+>>> 18:46:34.713  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #134)
+>>> 18:46:34.972  LID CLOSED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #135)
+[18:46:34.972] Apple audio 0x2030  rssi -43  pod 0x60
+  07 19 01 30 20 75 9A F4 5A 00 08  | +16 encrypted
+  CHANGED: [8] 52->5A
+  lid: CLOSED  count=2   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:35.004  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #136)
+[18:46:35.004] Apple audio 0x2030  rssi -38  pod 0x00
+  07 19 01 30 20 15 A9 F4 59 00 08  | +16 encrypted
+  CHANGED: [8] 51->59
+  lid: CLOSED  count=1   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:35.257  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #137)
+>>> 18:46:35.566  LID OPENED   [8]=0x53 count=3 closed=false  (Apple audio 0x2030, event #138)
+[18:46:35.566] Apple audio 0x2030  rssi -39  pod 0x60
+  07 19 01 30 20 75 9A F4 53 00 08  | +16 encrypted
+  CHANGED: [8] 5A->53
+  lid: OPEN  count=3   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:35.591  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #139)
+[18:46:35.591] Apple audio 0x2030  rssi -36  pod 0x00
+  07 19 01 30 20 15 A9 F4 52 00 08  | +16 encrypted
+  CHANGED: [8] 59->52
+  lid: OPEN  count=2   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:35.864  LID CLOSED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #140)
+[18:46:35.864] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 15 A9 F4 5A 00 08  | +16 encrypted
+  CHANGED: [8] 52->5A
+  lid: CLOSED  count=2   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:35.871  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #141)
+[18:46:35.871] Apple audio 0x2030  rssi -42  pod 0x60
+  07 19 01 30 20 75 9A F4 5B 00 08  | +16 encrypted
+  CHANGED: [8] 53->5B
+  lid: CLOSED  count=3   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:35.909  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #142)
+>>> 18:46:36.176  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #143)
+>>> 18:46:36.480  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #144)
+debug  adverts=2765 withMfgData=1938 apple=1405 type07=888 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=888 0x10=481 0x12=36
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:36.771  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #145)
+[18:46:36.771] Apple audio 0x2030  rssi -39  pod 0x60
+  07 19 01 30 20 75 9A F4 54 00 08  | +16 encrypted
+  CHANGED: [8] 5B->54
+  lid: OPEN  count=4   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:36.773  LID OPENED   [8]=0x53 count=3 closed=false  (Apple audio 0x2030, event #146)
+[18:46:36.773] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 15 A9 F4 53 00 08  | +16 encrypted
+  CHANGED: [8] 5A->53
+  lid: OPEN  count=3   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:36.794  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #147)
+>>> 18:46:36.814  LID OPENED   [8]=0x53 count=3 closed=false  (Apple audio 0x2030, event #148)
+>>> 18:46:36.818  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #149)
+>>> 18:46:37.379  LID CLOSED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #150)
+[18:46:37.380] Apple audio 0x2030  rssi -36  pod 0x00
+  07 19 01 30 20 15 A9 F4 5B 00 08  | +16 encrypted
+  CHANGED: [8] 53->5B
+  lid: CLOSED  count=3   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:37.671  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #151)
+[18:46:37.671] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 5C 00 08  | +16 encrypted
+  CHANGED: [8] 54->5C
+  lid: CLOSED  count=4   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:37.705  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #152)
+>>> 18:46:37.957  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #153)
+>>> 18:46:37.971  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #154)
+>>> 18:46:37.981  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #155)
+>>> 18:46:37.997  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #156)
+>>> 18:46:38.002  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #157)
+>>> 18:46:38.019  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #158)
+>>> 18:46:38.270  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #159)
+>>> 18:46:38.286  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #160)
+>>> 18:46:38.574  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #161)
+>>> 18:46:38.595  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #162)
+>>> 18:46:38.861  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #163)
+>>> 18:46:38.873  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #164)
+>>> 18:46:38.882  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #165)
+>>> 18:46:39.155  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #166)
+>>> 18:46:39.180  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #167)
+>>> 18:46:39.185  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #168)
+>>> 18:46:39.484  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #169)
+>>> 18:46:39.511  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #170)
+>>> 18:46:39.516  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #171)
+debug  adverts=2861 withMfgData=2003 apple=1461 type07=928 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=928 0x10=496 0x12=37
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:39.772  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #172)
+>>> 18:46:39.801  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #173)
+>>> 18:46:40.096  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #174)
+>>> 18:46:40.115  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #175)
+>>> 18:46:40.122  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #176)
+>>> 18:46:40.396  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #177)
+>>> 18:46:40.402  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #178)
+>>> 18:46:40.417  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #179)
+>>> 18:46:40.670  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #180)
+>>> 18:46:40.696  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #181)
+>>> 18:46:40.696  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #182)
+>>> 18:46:40.713  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #183)
+>>> 18:46:40.961  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #184)
+>>> 18:46:40.988  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #185)
+>>> 18:46:40.989  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #186)
+>>> 18:46:41.010  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #187)
+>>> 18:46:41.014  LID OPENED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #188)
+[18:46:41.582] Apple audio 0x2030  rssi -39  pod 0x00
+  07 19 01 30 20 14 A9 F4 5B 00 08  | +16 encrypted
+  CHANGED: [5] 15->14
+  lid: CLOSED  count=3   pods=100%/90%  case=n/a
+  status=0b00010100
+
+>>> 18:46:42.209  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #189)
+[18:46:42.209] Apple audio 0x2030  rssi -37  pod 0x00
+  07 19 01 30 20 14 A9 F4 54 00 08  | +16 encrypted
+  CHANGED: [8] 5B->54
+  lid: OPEN  count=4   pods=100%/90%  case=n/a
+  status=0b00010100
+
+[18:46:42.510] Apple audio 0x2030  rssi -41  pod 0x00
+  07 19 01 30 20 14 A9 F4 54 00 0C  | +16 encrypted
+  CHANGED: [10] 08->0C
+  lid: OPEN  count=4   pods=100%/90%  case=n/a
+  status=0b00010100
+
+debug  adverts=2965 withMfgData=2074 apple=1517 type07=962 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=962 0x10=517 0x12=38
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+[18:46:42.798] Apple audio 0x2030  rssi -39  pod 0x00
+  07 19 01 30 20 14 A9 F4 54 00 08  | +16 encrypted
+  CHANGED: [10] 0C->08
+  lid: OPEN  count=4   pods=100%/90%  case=n/a
+  status=0b00010100
+
+>>> 18:46:43.110  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #190)
+[18:46:43.111] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 55 00 08  | +16 encrypted
+  CHANGED: [8] 5C->55
+  lid: OPEN  count=5   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:43.141  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #191)
+[18:46:43.141] Apple audio 0x2030  rssi -39  pod 0x00
+  07 19 01 30 20 15 A9 F4 54 00 08  | +16 encrypted
+  CHANGED: [5] 14->15
+  lid: OPEN  count=4   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:43.392  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #192)
+>>> 18:46:43.413  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #193)
+>>> 18:46:43.446  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #194)
+>>> 18:46:43.705  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #195)
+>>> 18:46:43.719  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #196)
+>>> 18:46:43.734  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #197)
+>>> 18:46:43.742  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #198)
+>>> 18:46:44.005  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #199)
+>>> 18:46:44.010  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #200)
+>>> 18:46:44.026  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #201)
+>>> 18:46:44.038  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #202)
+>>> 18:46:44.310  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #203)
+>>> 18:46:44.327  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #204)
+>>> 18:46:44.609  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #205)
+>>> 18:46:44.626  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #206)
+>>> 18:46:44.635  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #207)
+>>> 18:46:44.948  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #208)
+>>> 18:46:45.186  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #209)
+>>> 18:46:45.223  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #210)
+>>> 18:46:45.229  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #211)
+>>> 18:46:45.249  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #212)
+>>> 18:46:45.483  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #213)
+>>> 18:46:45.496  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #214)
+>>> 18:46:45.505  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #215)
+>>> 18:46:45.519  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #216)
+>>> 18:46:45.529  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #217)
+>>> 18:46:45.539  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #218)
+debug  adverts=3055 withMfgData=2135 apple=1568 type07=997 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=997 0x10=532 0x12=39
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:45.784  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #219)
+>>> 18:46:45.797  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #220)
+>>> 18:46:46.098  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #221)
+>>> 18:46:46.118  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #222)
+>>> 18:46:46.125  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #223)
+>>> 18:46:46.140  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #224)
+>>> 18:46:46.150  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #225)
+>>> 18:46:46.443  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #226)
+>>> 18:46:46.714  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #227)
+>>> 18:46:46.750  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #228)
+>>> 18:46:47.001  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #229)
+>>> 18:46:47.042  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #230)
+>>> 18:46:47.049  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #231)
+>>> 18:46:47.293  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #232)
+>>> 18:46:47.313  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #233)
+>>> 18:46:47.313  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #234)
+>>> 18:46:47.325  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #235)
+>>> 18:46:47.596  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #236)
+>>> 18:46:47.636  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #237)
+>>> 18:46:47.904  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #238)
+>>> 18:46:47.913  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #239)
+>>> 18:46:48.214  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #240)
+>>> 18:46:48.227  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #241)
+>>> 18:46:48.521  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #242)
+>>> 18:46:48.537  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #243)
+>>> 18:46:48.543  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #244)
+debug  adverts=3170 withMfgData=2212 apple=1630 type07=1036 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=1036 0x10=554 0x12=40
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:48.787  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #245)
+>>> 18:46:48.808  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #246)
+>>> 18:46:48.815  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #247)
+>>> 18:46:48.836  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #248)
+>>> 18:46:49.100  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #249)
+>>> 18:46:49.108  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #250)
+>>> 18:46:49.435  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #251)
+>>> 18:46:49.687  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #252)
+>>> 18:46:49.693  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #253)
+>>> 18:46:50.005  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #254)
+>>> 18:46:50.011  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #255)
+>>> 18:46:50.310  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #256)
+>>> 18:46:50.319  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #257)
+>>> 18:46:50.943  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #258)
+>>> 18:46:51.187  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #259)
+>>> 18:46:51.193  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #260)
+>>> 18:46:51.215  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #261)
+>>> 18:46:51.521  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #262)
+>>> 18:46:51.540  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #263)
+debug  adverts=3245 withMfgData=2269 apple=1675 type07=1065 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=1065 0x10=570 0x12=40
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:51.783  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #264)
+>>> 18:46:51.796  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #265)
+>>> 18:46:51.843  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #266)
+>>> 18:46:52.409  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #267)
+>>> 18:46:53.614  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #268)
+>>> 18:46:53.898  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #269)
+>>> 18:46:54.352  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #270)
+debug  adverts=3320 withMfgData=2318 apple=1709 type07=1076 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=1076 0x10=591 0x12=42
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:55.569  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #271)
+>>> 18:46:56.782  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #272)
+>>> 18:46:57.064  LID CLOSED   [8]=0x5D count=5 closed=true  (Apple audio 0x2030, event #273)
+[18:46:57.067] Apple audio 0x2030  rssi -61  pod 0x60
+  07 19 01 30 20 75 9A F4 5D 00 08  | +16 encrypted
+  CHANGED: [8] 55->5D
+  lid: CLOSED  count=5   pods=90%/100%  case=n/a
+  status=0b01110101
+
+debug  adverts=3378 withMfgData=2352 apple=1729 type07=1081 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=1081 0x10=606 0x12=42
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:46:57.687  LID OPENED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #274)
+[18:46:57.688] Apple audio 0x2030  rssi -40  pod 0x00
+  07 19 01 30 20 15 A9 F4 5C 00 08  | +16 encrypted
+  CHANGED: [8] 54->5C
+  lid: CLOSED  count=4   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:57.975  LID OPENED   [8]=0x56 count=6 closed=false  (Apple audio 0x2030, event #275)
+[18:46:57.976] Apple audio 0x2030  rssi -45  pod 0x60
+  07 19 01 30 20 75 9A F4 56 00 08  | +16 encrypted
+  CHANGED: [8] 5D->56
+  lid: OPEN  count=6   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:58.525  LID CLOSED   [8]=0x5D count=5 closed=true  (Apple audio 0x2030, event #276)
+[18:46:58.526] Apple audio 0x2030  rssi -41  pod 0x00
+  07 19 01 30 20 15 A9 F4 5D 00 08  | +16 encrypted
+  CHANGED: [8] 5C->5D
+  lid: CLOSED  count=5   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:58.574  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #277)
+[18:46:58.575] Apple audio 0x2030  rssi -47  pod 0x60
+  07 19 01 30 20 75 9A F4 5E 00 08  | +16 encrypted
+  CHANGED: [8] 56->5E
+  lid: CLOSED  count=6   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:58.860  LID OPENED   [8]=0x5D count=5 closed=true  (Apple audio 0x2030, event #278)
+>>> 18:46:58.866  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #279)
+>>> 18:46:59.142  LID OPENED   [8]=0x56 count=6 closed=false  (Apple audio 0x2030, event #280)
+[18:46:59.143] Apple audio 0x2030  rssi -36  pod 0x00
+  07 19 01 30 20 15 A9 F4 56 00 08  | +16 encrypted
+  CHANGED: [8] 5D->56
+  lid: OPEN  count=6   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:59.147  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #281)
+[18:46:59.147] Apple audio 0x2030  rssi -43  pod 0x60
+  07 19 01 30 20 75 9A F4 57 00 08  | +16 encrypted
+  CHANGED: [8] 5E->57
+  lid: OPEN  count=7   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:59.451  LID CLOSED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #282)
+[18:46:59.451] Apple audio 0x2030  rssi -40  pod 0x00
+  07 19 01 30 20 15 A9 F4 5E 00 08  | +16 encrypted
+  CHANGED: [8] 56->5E
+  lid: CLOSED  count=6   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:46:59.460  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #283)
+>>> 18:46:59.732  LID CLOSED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #284)
+>>> 18:46:59.750  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #285)
+[18:46:59.750] Apple audio 0x2030  rssi -43  pod 0x60
+  07 19 01 30 20 75 9A F4 5F 00 08  | +16 encrypted
+  CHANGED: [8] 57->5F
+  lid: CLOSED  count=7   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:46:59.782  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #286)
+>>> 18:47:00.012  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #287)
+>>> 18:47:00.133  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #288)
+>>> 18:47:00.186  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #289)
+>>> 18:47:00.204  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #290)
+>>> 18:47:00.237  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #291)
+>>> 18:47:00.250  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #292)
+>>> 18:47:00.362  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #293)
+>>> 18:47:00.379  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #294)
+>>> 18:47:00.439  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #295)
+>>> 18:47:00.451  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #296)
+>>> 18:47:00.536  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #297)
+debug  adverts=3500 withMfgData=2437 apple=1795 type07=1120 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=1120 0x10=633 0x12=42
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:47:00.567  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #298)
+>>> 18:47:00.673  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #299)
+>>> 18:47:00.745  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #300)
+>>> 18:47:00.780  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #301)
+>>> 18:47:00.849  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #302)
+>>> 18:47:00.896  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #303)
+>>> 18:47:00.921  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #304)
+>>> 18:47:00.926  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #305)
+>>> 18:47:01.026  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #306)
+>>> 18:47:01.050  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #307)
+>>> 18:47:01.093  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #308)
+>>> 18:47:01.117  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #309)
+>>> 18:47:01.119  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #310)
+>>> 18:47:01.146  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #311)
+>>> 18:47:01.226  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #312)
+>>> 18:47:01.293  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #313)
+>>> 18:47:01.333  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #314)
+>>> 18:47:01.378  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #315)
+>>> 18:47:01.383  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #316)
+>>> 18:47:01.453  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #317)
+>>> 18:47:01.457  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #318)
+>>> 18:47:01.499  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #319)
+>>> 18:47:01.529  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #320)
+>>> 18:47:01.582  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #321)
+>>> 18:47:01.582  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #322)
+>>> 18:47:01.649  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #323)
+>>> 18:47:01.708  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #324)
+>>> 18:47:01.751  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #325)
+>>> 18:47:01.754  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #326)
+>>> 18:47:01.772  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #327)
+>>> 18:47:01.867  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #328)
+>>> 18:47:01.871  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #329)
+>>> 18:47:01.920  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #330)
+>>> 18:47:01.939  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #331)
+>>> 18:47:01.992  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #332)
+>>> 18:47:02.042  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #333)
+>>> 18:47:02.046  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #334)
+>>> 18:47:02.193  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #335)
+>>> 18:47:02.299  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #336)
+>>> 18:47:02.316  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #337)
+>>> 18:47:02.322  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #338)
+>>> 18:47:02.340  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #339)
+>>> 18:47:02.344  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #340)
+>>> 18:47:02.410  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #341)
+>>> 18:47:02.425  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #342)
+>>> 18:47:02.477  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #343)
+>>> 18:47:02.482  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #344)
+>>> 18:47:02.637  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #345)
+>>> 18:47:02.659  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #346)
+>>> 18:47:02.661  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #347)
+>>> 18:47:02.702  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #348)
+>>> 18:47:02.709  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #349)
+>>> 18:47:02.768  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #350)
+>>> 18:47:02.780  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #351)
+>>> 18:47:02.815  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #352)
+>>> 18:47:02.830  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #353)
+>>> 18:47:02.882  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #354)
+>>> 18:47:02.900  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #355)
+>>> 18:47:03.007  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #356)
+>>> 18:47:03.016  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #357)
+>>> 18:47:03.054  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #358)
+>>> 18:47:03.089  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #359)
+>>> 18:47:03.358  LID OPENED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #360)
+debug  adverts=3749 withMfgData=2619 apple=1937 type07=1215 droppedByRssiFloor=0  bestRssi=-30 bestAppleRssi=-30
+       apple continuity types: 0x07=1215 0x10=677 0x12=45
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+[18:47:03.852] Apple audio 0x2030  rssi -45  pod 0x00
+  07 19 01 30 20 14 A9 F4 5E 00 08  | +16 encrypted
+  CHANGED: [5] 15->14
+  lid: CLOSED  count=6   pods=100%/90%  case=n/a
+  status=0b00010100
+
+[18:47:05.933] Apple audio 0x2030  rssi -51  pod 0x00
+  07 19 01 30 20 04 F9 D4 5E 00 08  | +16 encrypted
+  CHANGED: [5] 14->04  [6] A9->F9  [7] F4->D4
+  lid: CLOSED  count=6   pods=n/a/90%  case=130%
+  status=0b00000100
+
+>>> 18:47:06.371  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #361)
+[18:47:06.373] Apple audio 0x2030  rssi -52  pod 0x00
+  07 19 01 30 20 04 F9 D4 57 00 08  | +16 encrypted
+  CHANGED: [8] 5E->57
+  lid: OPEN  count=7   pods=n/a/90%  case=130%
+  status=0b00000100
+
+debug  adverts=3955 withMfgData=2753 apple=2033 type07=1266 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1266 0x10=717 0x12=50
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+[18:47:07.865] Apple audio 0x2030  rssi -44  pod 0x00
+  07 19 01 30 20 15 A9 F4 57 00 08  | +16 encrypted
+  CHANGED: [5] 04->15  [6] F9->A9  [7] D4->F4
+  lid: OPEN  count=7   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:47:07.936  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #362)
+[18:47:07.937] Apple audio 0x2030  rssi -52  pod 0x60
+  07 19 01 30 20 75 9A F4 51 00 08  | +16 encrypted
+  CHANGED: [8] 5F->51
+  lid: OPEN  count=1   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:47:07.995  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #363)
+>>> 18:47:08.049  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #364)
+>>> 18:47:08.097  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #365)
+>>> 18:47:08.102  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #366)
+>>> 18:47:08.192  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #367)
+>>> 18:47:08.232  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #368)
+>>> 18:47:08.242  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #369)
+>>> 18:47:08.284  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #370)
+>>> 18:47:08.298  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #371)
+>>> 18:47:08.337  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #372)
+>>> 18:47:08.353  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #373)
+>>> 18:47:08.363  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #374)
+>>> 18:47:08.410  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #375)
+>>> 18:47:08.417  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #376)
+>>> 18:47:08.451  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #377)
+>>> 18:47:08.461  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #378)
+>>> 18:47:08.521  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #379)
+>>> 18:47:08.540  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #380)
+>>> 18:47:08.574  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #381)
+>>> 18:47:08.587  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #382)
+>>> 18:47:08.638  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #383)
+>>> 18:47:08.680  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #384)
+>>> 18:47:08.693  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #385)
+>>> 18:47:08.721  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #386)
+>>> 18:47:08.771  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #387)
+>>> 18:47:08.776  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #388)
+>>> 18:47:08.837  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #389)
+>>> 18:47:08.934  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #390)
+>>> 18:47:08.944  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #391)
+>>> 18:47:08.991  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #392)
+>>> 18:47:09.016  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #393)
+>>> 18:47:09.056  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #394)
+>>> 18:47:09.083  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #395)
+>>> 18:47:09.188  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #396)
+>>> 18:47:09.234  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #397)
+>>> 18:47:09.256  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #398)
+>>> 18:47:09.264  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #399)
+>>> 18:47:09.309  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #400)
+>>> 18:47:09.317  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #401)
+>>> 18:47:09.354  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #402)
+>>> 18:47:09.367  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #403)
+>>> 18:47:09.425  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #404)
+>>> 18:47:09.444  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #405)
+>>> 18:47:09.479  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #406)
+>>> 18:47:09.486  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #407)
+>>> 18:47:09.501  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #408)
+debug  adverts=4205 withMfgData=2933 apple=2166 type07=1353 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1353 0x10=759 0x12=54
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:47:09.592  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #409)
+>>> 18:47:09.610  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #410)
+>>> 18:47:09.618  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #411)
+>>> 18:47:09.811  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #412)
+>>> 18:47:09.816  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #413)
+>>> 18:47:09.897  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #414)
+>>> 18:47:09.967  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #415)
+>>> 18:47:10.022  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #416)
+>>> 18:47:10.106  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #417)
+>>> 18:47:10.149  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #418)
+>>> 18:47:10.156  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #419)
+>>> 18:47:10.199  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #420)
+>>> 18:47:10.261  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #421)
+>>> 18:47:10.271  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #422)
+>>> 18:47:10.335  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #423)
+>>> 18:47:10.373  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #424)
+>>> 18:47:10.379  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #425)
+>>> 18:47:10.453  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #426)
+>>> 18:47:10.501  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #427)
+>>> 18:47:10.647  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #428)
+>>> 18:47:10.697  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #429)
+>>> 18:47:10.754  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #430)
+>>> 18:47:10.768  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #431)
+>>> 18:47:10.796  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #432)
+>>> 18:47:10.816  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #433)
+>>> 18:47:10.826  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #434)
+>>> 18:47:10.857  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #435)
+>>> 18:47:10.946  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #436)
+>>> 18:47:10.990  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #437)
+>>> 18:47:10.996  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #438)
+>>> 18:47:11.041  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #439)
+>>> 18:47:11.047  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #440)
+>>> 18:47:11.172  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #441)
+>>> 18:47:11.243  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #442)
+>>> 18:47:11.250  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #443)
+>>> 18:47:11.265  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #444)
+>>> 18:47:11.279  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #445)
+>>> 18:47:11.287  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #446)
+>>> 18:47:11.354  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #447)
+>>> 18:47:11.361  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #448)
+>>> 18:47:11.487  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #449)
+>>> 18:47:11.549  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #450)
+>>> 18:47:11.595  LID OPENED   [8]=0x57 count=7 closed=false  (Apple audio 0x2030, event #451)
+>>> 18:47:11.636  LID CLOSED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #452)
+[18:47:11.637] Apple audio 0x2030  rssi -44  pod 0x00
+  07 19 01 30 20 15 A9 F4 5F 00 08  | +16 encrypted
+  CHANGED: [8] 57->5F
+  lid: CLOSED  count=7   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:47:11.647  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #453)
+[18:47:11.647] Apple audio 0x2030  rssi -43  pod 0x60
+  07 19 01 30 20 75 9A F4 59 00 08  | +16 encrypted
+  CHANGED: [8] 51->59
+  lid: CLOSED  count=1   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:47:11.651  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #454)
+>>> 18:47:11.717  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #455)
+>>> 18:47:11.727  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #456)
+>>> 18:47:11.819  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #457)
+>>> 18:47:11.826  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #458)
+>>> 18:47:11.841  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #459)
+>>> 18:47:11.846  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #460)
+>>> 18:47:11.896  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #461)
+>>> 18:47:11.904  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #462)
+>>> 18:47:11.998  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #463)
+>>> 18:47:12.022  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #464)
+>>> 18:47:12.112  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #465)
+>>> 18:47:12.134  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #466)
+>>> 18:47:12.255  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #467)
+>>> 18:47:12.310  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #468)
+>>> 18:47:12.383  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #469)
+>>> 18:47:12.427  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #470)
+>>> 18:47:12.436  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #471)
+>>> 18:47:12.475  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #472)
+>>> 18:47:12.480  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #473)
+debug  adverts=4441 withMfgData=3117 apple=2310 type07=1453 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1453 0x10=798 0x12=59
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:47:12.556  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #474)
+>>> 18:47:12.659  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #475)
+>>> 18:47:12.663  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #476)
+>>> 18:47:12.679  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #477)
+>>> 18:47:12.923  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #478)
+>>> 18:47:12.976  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #479)
+>>> 18:47:13.020  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #480)
+>>> 18:47:13.026  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #481)
+>>> 18:47:13.042  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #482)
+>>> 18:47:13.085  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #483)
+>>> 18:47:13.096  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #484)
+>>> 18:47:13.107  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #485)
+>>> 18:47:13.133  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #486)
+>>> 18:47:13.155  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #487)
+>>> 18:47:13.193  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #488)
+>>> 18:47:13.211  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #489)
+>>> 18:47:13.311  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #490)
+>>> 18:47:13.331  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #491)
+>>> 18:47:13.334  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #492)
+>>> 18:47:13.385  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #493)
+>>> 18:47:13.389  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #494)
+>>> 18:47:13.453  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #495)
+>>> 18:47:13.494  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #496)
+>>> 18:47:13.502  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #497)
+>>> 18:47:13.553  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #498)
+>>> 18:47:13.555  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #499)
+>>> 18:47:13.687  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #500)
+>>> 18:47:13.706  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #501)
+>>> 18:47:13.735  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #502)
+>>> 18:47:13.752  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #503)
+>>> 18:47:13.818  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #504)
+>>> 18:47:13.862  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #505)
+>>> 18:47:13.883  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #506)
+>>> 18:47:13.934  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #507)
+>>> 18:47:13.938  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #508)
+>>> 18:47:13.977  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #509)
+>>> 18:47:13.990  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #510)
+>>> 18:47:14.002  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #511)
+>>> 18:47:14.032  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #512)
+>>> 18:47:14.055  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #513)
+>>> 18:47:14.055  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #514)
+>>> 18:47:14.100  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #515)
+>>> 18:47:14.107  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #516)
+>>> 18:47:14.169  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #517)
+>>> 18:47:14.231  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #518)
+>>> 18:47:14.238  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #519)
+>>> 18:47:14.402  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #520)
+>>> 18:47:14.416  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #521)
+>>> 18:47:14.457  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #522)
+>>> 18:47:14.471  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #523)
+>>> 18:47:14.480  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #524)
+>>> 18:47:14.531  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #525)
+>>> 18:47:14.578  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #526)
+>>> 18:47:14.597  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #527)
+>>> 18:47:14.641  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #528)
+>>> 18:47:14.652  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #529)
+>>> 18:47:14.658  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #530)
+>>> 18:47:14.720  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #531)
+>>> 18:47:14.771  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #532)
+>>> 18:47:14.777  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #533)
+>>> 18:47:14.826  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #534)
+>>> 18:47:14.831  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #535)
+>>> 18:47:14.904  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #536)
+>>> 18:47:14.942  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #537)
+>>> 18:47:14.960  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #538)
+>>> 18:47:15.022  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #539)
+>>> 18:47:15.130  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #540)
+>>> 18:47:15.197  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #541)
+>>> 18:47:15.200  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #542)
+>>> 18:47:15.333  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #543)
+>>> 18:47:15.348  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #544)
+>>> 18:47:15.379  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #545)
+>>> 18:47:15.394  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #546)
+>>> 18:47:15.403  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #547)
+>>> 18:47:15.443  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #548)
+>>> 18:47:15.504  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #549)
+>>> 18:47:15.531  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #550)
+>>> 18:47:15.532  LID OPENED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #551)
+debug  adverts=4720 withMfgData=3322 apple=2456 type07=1556 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1556 0x10=838 0x12=62
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:47:15.804  LID OPENED   [8]=0x5F count=7 closed=true  (Apple audio 0x2030, event #552)
+[18:47:15.857] Apple audio 0x2030  rssi -48  pod 0x00
+  07 19 01 30 20 14 A9 F4 5F 00 08  | +16 encrypted
+  CHANGED: [5] 15->14
+  lid: CLOSED  count=7   pods=100%/90%  case=n/a
+  status=0b00010100
+
+>>> 18:47:16.107  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #553)
+[18:47:16.107] Apple audio 0x2030  rssi -50  pod 0x00
+  07 19 01 30 20 14 A9 F4 50 00 08  | +16 encrypted
+  CHANGED: [8] 5F->50
+  lid: OPEN  count=0   pods=100%/90%  case=n/a
+  status=0b00010100
+
+[18:47:17.062] Apple audio 0x2030  rssi -49  pod 0x00
+  07 19 01 30 20 15 A9 F4 50 00 08  | +16 encrypted
+  CHANGED: [5] 14->15
+  lid: OPEN  count=0   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:47:17.324  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #554)
+[18:47:17.324] Apple audio 0x2030  rssi -57  pod 0x60
+  07 19 01 30 20 75 9A F4 52 00 08  | +16 encrypted
+  CHANGED: [8] 59->52
+  lid: OPEN  count=2   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:47:17.338  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #555)
+>>> 18:47:17.350  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #556)
+>>> 18:47:17.611  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #557)
+>>> 18:47:17.662  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #558)
+>>> 18:47:17.904  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #559)
+>>> 18:47:17.922  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #560)
+>>> 18:47:17.927  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #561)
+>>> 18:47:17.950  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #562)
+>>> 18:47:17.952  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #563)
+>>> 18:47:18.217  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #564)
+>>> 18:47:18.233  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #565)
+>>> 18:47:18.239  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #566)
+>>> 18:47:18.257  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #567)
+debug  adverts=4803 withMfgData=3376 apple=2501 type07=1588 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1588 0x10=849 0x12=64
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:47:18.800  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #568)
+>>> 18:47:18.820  LID OPENED   [8]=0x50 count=0 closed=false  (Apple audio 0x2030, event #569)
+>>> 18:47:18.849  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #570)
+>>> 18:47:19.112  LID CLOSED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #571)
+[18:47:19.113] Apple audio 0x2030  rssi -48  pod 0x60
+  07 19 01 30 20 75 9A F4 5A 00 08  | +16 encrypted
+  CHANGED: [8] 52->5A
+  lid: CLOSED  count=2   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:47:19.132  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #572)
+[18:47:19.132] Apple audio 0x2030  rssi -45  pod 0x00
+  07 19 01 30 20 15 A9 F4 58 00 08  | +16 encrypted
+  CHANGED: [8] 50->58
+  lid: CLOSED  count=0   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:47:19.139  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #573)
+>>> 18:47:19.161  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #574)
+>>> 18:47:19.417  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #575)
+>>> 18:47:19.425  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #576)
+>>> 18:47:19.460  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #577)
+>>> 18:47:19.700  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #578)
+>>> 18:47:20.005  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #579)
+>>> 18:47:20.008  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #580)
+>>> 18:47:20.029  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #581)
+>>> 18:47:20.035  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #582)
+>>> 18:47:20.053  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #583)
+>>> 18:47:20.331  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #584)
+>>> 18:47:20.355  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #585)
+>>> 18:47:20.355  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #586)
+>>> 18:47:20.661  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #587)
+>>> 18:47:20.900  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #588)
+>>> 18:47:20.907  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #589)
+>>> 18:47:20.927  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #590)
+>>> 18:47:20.934  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #591)
+>>> 18:47:21.220  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #592)
+>>> 18:47:21.242  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #593)
+>>> 18:47:21.246  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #594)
+debug  adverts=4913 withMfgData=3455 apple=2561 type07=1628 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1628 0x10=869 0x12=64
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:47:21.850  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #595)
+>>> 18:47:22.129  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #596)
+>>> 18:47:22.143  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #597)
+>>> 18:47:22.155  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #598)
+>>> 18:47:22.398  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #599)
+>>> 18:47:22.414  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #600)
+>>> 18:47:22.446  LID OPENED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #601)
+>>> 18:47:22.761  LID OPENED   [8]=0x58 count=0 closed=true  (Apple audio 0x2030, event #602)
+[18:47:23.344] Apple audio 0x2030  rssi -40  pod 0x00
+  07 19 01 30 20 14 A9 F4 58 00 08  | +16 encrypted
+  CHANGED: [5] 15->14
+  lid: CLOSED  count=0   pods=100%/90%  case=n/a
+  status=0b00010100
+
+debug  adverts=4999 withMfgData=3513 apple=2599 type07=1650 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1650 0x10=885 0x12=64
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+[18:47:27.208] Apple audio 0x2030  rssi -50  pod 0x00
+  07 19 01 30 20 04 F9 D4 58 00 08  | +16 encrypted
+  CHANGED: [5] 14->04  [6] A9->F9  [7] F4->D4
+  lid: CLOSED  count=0   pods=n/a/90%  case=130%
+  status=0b00000100
+
+debug  adverts=5081 withMfgData=3568 apple=2629 type07=1663 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1663 0x10=901 0x12=65
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:47:29.328  LID OPENED   [8]=0x51 count=1 closed=false  (Apple audio 0x2030, event #603)
+[18:47:29.330] Apple audio 0x2030  rssi -39  pod 0x00
+  07 19 01 30 20 14 A9 F4 51 00 08  | +16 encrypted
+  CHANGED: [5] 04->14  [6] F9->A9  [7] D4->F4  [8] 58->51
+  lid: OPEN  count=1   pods=100%/90%  case=n/a
+  status=0b00010100
+
+debug  adverts=5159 withMfgData=3618 apple=2660 type07=1665 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1665 0x10=927 0x12=68
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+[18:47:32.621] Apple audio 0x2030  rssi -46  pod 0x00
+  07 19 01 30 20 15 A9 F4 51 00 08  | +16 encrypted
+  CHANGED: [5] 14->15
+  lid: OPEN  count=1   pods=100%/90%  case=n/a
+  status=0b00010101
+
+[18:47:32.633] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 51 00 08  | +16 encrypted
+  CHANGED: [8] 5A->51
+  lid: OPEN  count=1   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:47:33.244  LID CLOSED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #604)
+[18:47:33.244] Apple audio 0x2030  rssi -48  pod 0x00
+  07 19 01 30 20 15 A9 F4 59 00 08  | +16 encrypted
+  CHANGED: [8] 51->59
+  lid: CLOSED  count=1   pods=100%/90%  case=n/a
+  status=0b00010101
+
+[18:47:33.259] Apple audio 0x2030  rssi -71  pod 0x60
+  07 19 01 30 20 75 9A F4 59 00 08  | +16 encrypted
+  CHANGED: [8] 51->59
+  lid: CLOSED  count=1   pods=90%/100%  case=n/a
+  status=0b01110101
+
+debug  adverts=5240 withMfgData=3672 apple=2699 type07=1684 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1684 0x10=946 0x12=69
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:47:36.344  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #605)
+[18:47:36.344] Apple audio 0x2030  rssi -41  pod 0x60
+  07 19 01 30 20 75 9A F4 52 00 08  | +16 encrypted
+  CHANGED: [8] 59->52
+  lid: OPEN  count=2   pods=90%/100%  case=n/a
+  status=0b01110101
+
+>>> 18:47:36.349  LID CLOSED   [8]=0x59 count=1 closed=true  (Apple audio 0x2030, event #606)
+>>> 18:47:36.389  LID OPENED   [8]=0x52 count=2 closed=false  (Apple audio 0x2030, event #607)
+[18:47:36.389] Apple audio 0x2030  rssi -41  pod 0x00
+  07 19 01 30 20 15 A9 F4 52 00 08  | +16 encrypted
+  CHANGED: [8] 59->52
+  lid: OPEN  count=2   pods=100%/90%  case=n/a
+  status=0b00010101
+
+debug  adverts=5326 withMfgData=3737 apple=2749 type07=1720 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1720 0x10=957 0x12=72
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=5408 withMfgData=3793 apple=2797 type07=1753 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1753 0x10=970 0x12=74
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:47:40.832  LID CLOSED   [8]=0x5A count=2 closed=true  (Apple audio 0x2030, event #608)
+[18:47:40.832] Apple audio 0x2030  rssi -38  pod 0x60
+  07 19 01 30 20 75 9A F4 5A 00 08  | +16 encrypted
+  CHANGED: [8] 52->5A
+  lid: CLOSED  count=2   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:47:40.848] Apple audio 0x2030  rssi -39  pod 0x00
+  07 19 01 30 20 15 A9 F4 5A 00 08  | +16 encrypted
+  CHANGED: [8] 52->5A
+  lid: CLOSED  count=2   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:47:41.728  LID OPENED   [8]=0x53 count=3 closed=false  (Apple audio 0x2030, event #609)
+[18:47:41.729] Apple audio 0x2030  rssi -45  pod 0x60
+  07 19 01 30 20 75 9A F4 53 00 08  | +16 encrypted
+  CHANGED: [8] 5A->53
+  lid: OPEN  count=3   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:47:41.734] Apple audio 0x2030  rssi -40  pod 0x00
+  07 19 01 30 20 15 A9 F4 53 00 08  | +16 encrypted
+  CHANGED: [8] 5A->53
+  lid: OPEN  count=3   pods=100%/90%  case=n/a
+  status=0b00010101
+
+debug  adverts=5495 withMfgData=3861 apple=2855 type07=1795 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1795 0x10=984 0x12=76
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:47:43.243  LID CLOSED   [8]=0x5B count=3 closed=true  (Apple audio 0x2030, event #610)
+[18:47:43.244] Apple audio 0x2030  rssi -38  pod 0x60
+  07 19 01 30 20 75 9A F4 5B 00 08  | +16 encrypted
+  CHANGED: [8] 53->5B
+  lid: CLOSED  count=3   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:47:43.257] Apple audio 0x2030  rssi -40  pod 0x00
+  07 19 01 30 20 15 A9 F4 5B 00 08  | +16 encrypted
+  CHANGED: [8] 53->5B
+  lid: CLOSED  count=3   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:47:43.839  LID OPENED   [8]=0x54 count=4 closed=false  (Apple audio 0x2030, event #611)
+[18:47:43.839] Apple audio 0x2030  rssi -40  pod 0x00
+  07 19 01 30 20 15 A9 F4 54 00 08  | +16 encrypted
+  CHANGED: [8] 5B->54
+  lid: OPEN  count=4   pods=100%/90%  case=n/a
+  status=0b00010101
+
+[18:47:43.872] Apple audio 0x2030  rssi -45  pod 0x60
+  07 19 01 30 20 75 9A F4 54 00 08  | +16 encrypted
+  CHANGED: [8] 5B->54
+  lid: OPEN  count=4   pods=90%/100%  case=n/a
+  status=0b01110101
+
+debug  adverts=5570 withMfgData=3912 apple=2901 type07=1825 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1825 0x10=999 0x12=77
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:47:45.933  LID CLOSED   [8]=0x5C count=4 closed=true  (Apple audio 0x2030, event #612)
+[18:47:45.934] Apple audio 0x2030  rssi -39  pod 0x60
+  07 19 01 30 20 75 9A F4 5C 00 08  | +16 encrypted
+  CHANGED: [8] 54->5C
+  lid: CLOSED  count=4   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:47:45.955] Apple audio 0x2030  rssi -41  pod 0x00
+  07 19 01 30 20 15 A9 F4 5C 00 08  | +16 encrypted
+  CHANGED: [8] 54->5C
+  lid: CLOSED  count=4   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:47:46.886  LID OPENED   [8]=0x55 count=5 closed=false  (Apple audio 0x2030, event #613)
+[18:47:46.888] Apple audio 0x2030  rssi -42  pod 0x60
+  07 19 01 30 20 75 9A F4 55 00 08  | +16 encrypted
+  CHANGED: [8] 5C->55
+  lid: OPEN  count=5   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:47:47.140] Apple audio 0x2030  rssi -43  pod 0x00
+  07 19 01 30 20 15 A9 F4 55 00 08  | +16 encrypted
+  CHANGED: [8] 5C->55
+  lid: OPEN  count=5   pods=100%/90%  case=n/a
+  status=0b00010101
+
+debug  adverts=5669 withMfgData=3978 apple=2964 type07=1867 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1867 0x10=1019 0x12=78
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:47:49.849  LID CLOSED   [8]=0x5D count=5 closed=true  (Apple audio 0x2030, event #614)
+[18:47:49.850] Apple audio 0x2030  rssi -39  pod 0x60
+  07 19 01 30 20 75 9A F4 5D 00 08  | +16 encrypted
+  CHANGED: [8] 55->5D
+  lid: CLOSED  count=5   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:47:49.856] Apple audio 0x2030  rssi -38  pod 0x00
+  07 19 01 30 20 15 A9 F4 5D 00 08  | +16 encrypted
+  CHANGED: [8] 55->5D
+  lid: CLOSED  count=5   pods=100%/90%  case=n/a
+  status=0b00010101
+
+>>> 18:47:50.767  LID OPENED   [8]=0x56 count=6 closed=false  (Apple audio 0x2030, event #615)
+[18:47:50.767] Apple audio 0x2030  rssi -42  pod 0x60
+  07 19 01 30 20 75 9A F4 56 00 08  | +16 encrypted
+  CHANGED: [8] 5D->56
+  lid: OPEN  count=6   pods=90%/100%  case=n/a
+  status=0b01110101
+
+[18:47:51.044] Apple audio 0x2030  rssi -42  pod 0x00
+  07 19 01 30 20 15 A9 F4 56 00 08  | +16 encrypted
+  CHANGED: [8] 5D->56
+  lid: OPEN  count=6   pods=100%/90%  case=n/a
+  status=0b00010101
+
+debug  adverts=5760 withMfgData=4043 apple=3022 type07=1909 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1909 0x10=1034 0x12=79
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+>>> 18:47:52.544  LID CLOSED   [8]=0x5E count=6 closed=true  (Apple audio 0x2030, event #616)
+[18:47:52.544] Apple audio 0x2030  rssi -39  pod 0x00
+  07 19 01 30 20 15 A9 F4 5E 00 08  | +16 encrypted
+  CHANGED: [8] 56->5E
+  lid: CLOSED  count=6   pods=100%/90%  case=n/a
+  status=0b00010101
+
+[18:47:52.550] Apple audio 0x2030  rssi -39  pod 0x60
+  07 19 01 30 20 75 9A F4 5E 00 08  | +16 encrypted
+  CHANGED: [8] 56->5E
+  lid: CLOSED  count=6   pods=90%/100%  case=n/a
+  status=0b01110101
+
+debug  adverts=5861 withMfgData=4112 apple=3077 type07=1949 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1949 0x10=1048 0x12=80
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+[18:47:56.766] Apple audio 0x2030  rssi -42  pod 0x00
+  07 19 01 30 20 14 A9 F4 5E 00 08  | +16 encrypted
+  CHANGED: [5] 15->14
+  lid: CLOSED  count=6   pods=100%/90%  case=n/a
+  status=0b00010100
+
+debug  adverts=5966 withMfgData=4185 apple=3144 type07=1983 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1983 0x10=1069 0x12=83 0x0C=9
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=6069 withMfgData=4259 apple=3201 type07=1999 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=1999 0x10=1084 0x12=84 0x0C=34
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=6134 withMfgData=4299 apple=3233 type07=2005 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=2005 0x10=1104 0x12=86 0x0C=38
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=6201 withMfgData=4336 apple=3251 type07=2007 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=2007 0x10=1119 0x12=87 0x0C=38
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=6268 withMfgData=4372 apple=3273 type07=2010 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=2010 0x10=1137 0x12=88 0x0C=38
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=6327 withMfgData=4403 apple=3292 type07=2010 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=2010 0x10=1154 0x12=90 0x0C=38
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=6401 withMfgData=4439 apple=3318 type07=2010 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=2010 0x10=1178 0x12=92 0x0C=38
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=6467 withMfgData=4473 apple=3341 type07=2010 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=2010 0x10=1198 0x12=95 0x0C=38
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=6534 withMfgData=4503 apple=3358 type07=2010 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=2010 0x10=1213 0x12=97 0x0C=38
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=6604 withMfgData=4536 apple=3375 type07=2010 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=2010 0x10=1229 0x12=98 0x0C=38
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=6676 withMfgData=4570 apple=3401 type07=2010 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=2010 0x10=1252 0x12=101 0x0C=38
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=6749 withMfgData=4610 apple=3425 type07=2010 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=2010 0x10=1275 0x12=102 0x0C=38
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=6814 withMfgData=4645 apple=3446 type07=2010 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=2010 0x10=1295 0x12=103 0x0C=38
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=6870 withMfgData=4668 apple=3459 type07=2010 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=2010 0x10=1306 0x12=105 0x0C=38
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=6945 withMfgData=4708 apple=3486 type07=2010 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=2010 0x10=1332 0x12=106 0x0C=38
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00
+debug  adverts=7006 withMfgData=4740 apple=3502 type07=2010 droppedByRssiFloor=0  bestRssi=-29 bestAppleRssi=-29
+       apple continuity types: 0x07=2010 0x10=1348 0x12=106 0x0C=38
+         0x07: rssi -40  07 19 01 30 20 15 99 F4 56 00 08 48 E3 E3 A8 A6 A0 D4 BC EB 84 26 12 D5 D1 5D FF
+         0x0C: rssi -38  0C 0E 00 76 05 94 7C E0 C2 64 44 05 BF CA 96 67 10 06 75 1D D4 2C 16 C8
+         0x10: rssi -80  10 05 4A 1C AD 34 98
+         0x12: rssi -49  12 02 00 00

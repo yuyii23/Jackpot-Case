@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AirPods Battery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #fbf6ee; --ivory: #f5eee2; --paper: #fffaf3;
+    --brown: #6b4a39; --brown-2: #a18371; --line: #e6d8c6;
+    --green: #2e8f5a; --green-soft: #cdeedb; --mint: #e6f6ec;
+    --pink: #f4bccb; --rose: #e78fa6; --yellow: #f6d97f; --gold: #d8b57c; --champagne: #efe1c6;
+    --good: #2e8f5a; --mid: #cf9a3a; --low: #d75f7c; --muted: #b3a18f;
+    --u: min(92vw, 400px, 42vh);
+    --case-img: url(__CASE_IMG__); --case-mask: url(__MASK__); --body-mask: url(__BODY_MASK__);     /* the hero's size; everything around the case scales with it */
+  }
+  * { box-sizing: border-box; }
+  html { height: 100%; }
+  body {
+    margin: 0; min-height: 100%; color: var(--brown);
+    background:
+      radial-gradient(60% 40% at 50% 38%, rgba(255,255,255,.75) 0%, rgba(255,255,255,0) 70%),
+      radial-gradient(40% 30% at 12% 8%,  rgba(244,188,203,.22) 0%, rgba(244,188,203,0) 70%),
+      radial-gradient(40% 30% at 88% 92%, rgba(246,217,127,.22) 0%, rgba(246,217,127,0) 70%),
+      linear-gradient(180deg, var(--paper) 0%, var(--cream) 55%, var(--ivory) 100%);
+    font: 300 15px/1.5 "Kanit", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    display: flex; flex-direction: column; align-items: center;
+    overflow-x: hidden;
+  }
+  canvas#fx { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 20; }
+
+  /* ---------- scattered flowers, pearls and sparkles behind everything ---------- */
+  .deco { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+  .deco svg { position: absolute; opacity: .7; animation: drift 9s ease-in-out infinite; }
+  .deco svg:nth-child(2n) { animation-duration: 11s; animation-delay: -3s; }
+  .deco svg:nth-child(3n) { animation-duration: 13s; animation-delay: -6s; }
+  @keyframes drift { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-9px) rotate(5deg); } }
+  .sparkle { animation: twinkle 3.4s ease-in-out infinite !important; }
+  .sparkle:nth-child(2n) { animation-delay: -1.3s !important; }
+  @keyframes twinkle { 0%,100% { opacity: .25; transform: scale(.7); } 50% { opacity: .95; transform: scale(1.1); } }
+
+  .page {
+    position: relative; z-index: 1; width: 100%; max-width: 520px;
+    padding: max(18px, env(safe-area-inset-top)) 16px 28px;
+    display: flex; flex-direction: column; align-items: center;
+  }
+
+  /* ---------- header ---------- */
+  .head { position: relative; width: 100%; text-align: center; margin-top: 8px; }
+  h1 {
+    margin: 0; font-family: inherit;
+    font-weight: 300; font-size: 30px; letter-spacing: .28em; text-indent: .28em; color: var(--brown);
+  }
+  .rule {
+    display: flex; align-items: center; justify-content: center; gap: 10px; margin: 4px auto 2px; width: 72%;
+  }
+  .rule i { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold) 40%, var(--gold) 60%, transparent); opacity: .8; }
+  .rule i:first-child { background: linear-gradient(90deg, transparent, var(--gold)); }
+  .rule i:last-child  { background: linear-gradient(90deg, var(--gold), transparent); }
+  .rule svg { width: 13px; height: 13px; }
+  .sub {
+    font-family: inherit; font-size: 12.5px; font-weight: 300; letter-spacing: .3em; text-indent: .3em;
+    color: var(--brown-2); text-transform: uppercase;
+  }
+  .sub b { font-weight: 500; color: var(--brown); }
+
+  .opens {
+    position: absolute; right: 0; top: 2px; width: 54px; height: 54px; border-radius: 50%;
+    background: var(--paper); border: 1px solid var(--line);
+    box-shadow: 0 6px 18px rgba(107,74,57,.08), inset 0 1px 0 #fff;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1;
+  }
+  .opens b { font-size: 18px; color: var(--green); font-variant-numeric: tabular-nums; }
+  .opens small { font-size: 9px; color: var(--brown-2); letter-spacing: .05em; margin-top: 2px; }
+
+  .status { margin-top: 14px; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 999px;
+    background: var(--mint); border: 1px solid #cfe7d8; color: #3b6b4e; font-size: 13.5px;
+    box-shadow: 0 4px 14px rgba(46,143,90,.08), inset 0 1px 0 #fff; white-space: nowrap;
+  }
+  .pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 3px rgba(46,143,90,.18); }
+  .pill.dead { background: #fbe9ee; border-color: #f0cdd6; color: #9c4a60; }
+  .pill.dead::before { background: var(--low); box-shadow: 0 0 0 3px rgba(215,95,124,.18); }
+  .dev { font-size: 11.5px; color: var(--muted); letter-spacing: .06em; font-variant-numeric: tabular-nums; }
+
+  /* ---------- the hero: case, rings, pedestal, floating bubbles ---------- */
+  .hero {
+    position: relative; width: var(--u); height: calc(var(--u) * 1.0); margin-top: calc(var(--u) * .12);
+    display: flex; align-items: flex-end; justify-content: center;
+  }
+  .pedestal {
+    position: absolute; left: 50%; bottom: calc(var(--u) * .02); width: calc(var(--u) * .92); height: calc(var(--u) * .2);
+    transform: translateX(-50%); border-radius: 50%;
+    background: radial-gradient(60% 60% at 50% 30%, #fffdf8 0%, #f6eee1 60%, #eee2cf 100%);
+    box-shadow: 0 14px 28px rgba(107,74,57,.14), 0 2px 0 #fff inset;
+  }
+  .pedestal::after {
+    content: ""; position: absolute; inset: -6% 6% 30%; border-radius: 50%;
+    background: radial-gradient(50% 60% at 50% 40%, rgba(255,255,255,.9), rgba(255,255,255,0) 70%);
+  }
+  /* The case is one photo, shown in three layers so the lid can open and shut:
+     .body  the lower shell and strap only (always there),
+     .full  the whole photo, open lid and pods included (only while open),
+     .lid   a closed floral lid built from the body's own print, which swings
+            down over the rim when the case shuts. Coordinates are fractions of
+            the 540 x 517 photo: rim at y 168, shell x 18..362. */
+  .casebox {
+    position: relative; z-index: 2; width: calc(var(--u) * .86); aspect-ratio: 540 / 517;
+    margin-bottom: calc(var(--u) * .005); perspective: 760px;
+    filter: saturate(.92) brightness(.99);
+    transition: filter .5s ease, transform .5s cubic-bezier(.3,1.3,.4,1);
+  }
+  .hero[data-open="true"] .casebox { filter: saturate(1.05) brightness(1.02); transform: translateY(-3px); }
+  .casebox .body, .casebox .full {
+    position: absolute; inset: 0; background: var(--case-img) 0 0 / 100% 100% no-repeat;
+  }
+  .casebox .body { -webkit-mask: var(--body-mask) 0 0 / 100% 100% no-repeat; mask: var(--body-mask) 0 0 / 100% 100% no-repeat; }
+  .casebox .full {
+    -webkit-mask: var(--case-mask) 0 0 / 100% 100% no-repeat; mask: var(--case-mask) 0 0 / 100% 100% no-repeat;
+    opacity: 0; transition: opacity .18s ease-in;
+  }
+  .hero[data-open="true"] .casebox .full { opacity: 1; transition: opacity .32s ease-out .06s; }
+
+  .casebox .lid {
+    position: absolute; left: 3.33%; width: 63.7%; top: 11.2%; height: 21.3%;
+    border-radius: 40% 40% 5% 5% / 78% 78% 7% 7%;
+    /* the body's floral print, lined up with the shell below it */
+    background: var(--case-img) 9.18% 56% / 157% auto no-repeat;
+    box-shadow:
+      inset 0 2px 1px rgba(255,255,255,.95), inset 0 0 0 1px rgba(255,255,255,.55),
+      inset 0 -3px 0 rgba(214,196,168,.65), inset 0 -6px 8px rgba(107,74,57,.08),
+      0 4px 6px rgba(107,74,57,.12);
+    transform-origin: 50% 100%;
+    transform: none; opacity: 1;
+    transition: transform .55s cubic-bezier(.3,1.5,.55,1) .04s, opacity .14s ease-out;
+  }
+  .casebox .lid::before {          /* clear shell gloss across the dome */
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+    background:
+      radial-gradient(55% 45% at 50% 6%, rgba(255,255,255,.9), rgba(255,255,255,0) 70%),
+      radial-gradient(30% 50% at 12% 40%, rgba(255,255,255,.55), rgba(255,255,255,0) 70%),
+      linear-gradient(180deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,.12) 45%, rgba(255,255,255,0) 70%);
+  }
+  .casebox .lid::after {           /* the thin seam where lid meets shell */
+    content: ""; position: absolute; left: 3%; right: 3%; bottom: 0; height: 2px; border-radius: 2px;
+    background: linear-gradient(90deg, rgba(216,181,124,0), rgba(216,181,124,.7) 20%, rgba(255,255,255,.9) 50%, rgba(216,181,124,.7) 80%, rgba(216,181,124,0));
+  }
+  .hero[data-open="true"] .casebox .lid {
+    transform: translateY(-34%) rotateX(80deg); opacity: 0;
+    transition: transform .36s cubic-bezier(.5,0,.75,.4), opacity .2s ease-in .1s;
+  }
+
+  .ring {
+    position: absolute; left: 50%; top: 50%; border-radius: 50%; pointer-events: none; z-index: 1;
+    border: 1.5px solid transparent;
+    background: linear-gradient(var(--cream), var(--cream)) padding-box,
+                conic-gradient(from 20deg, rgba(246,217,127,0), var(--yellow), var(--pink), var(--green-soft), var(--gold), rgba(246,217,127,0)) border-box;
+    -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    opacity: .55; transition: opacity .5s; filter: blur(.3px);
+  }
+  .ring.r1 { width: calc(var(--u) * 1.04); height: calc(var(--u) * .62); transform: translate(-50%, -42%) rotate(-12deg); }
+  .ring.r2 { width: calc(var(--u) * .92); height: calc(var(--u) * .5);  transform: translate(-50%, -30%) rotate(14deg); opacity: .4; }
+  .hero[data-open="true"] .ring { opacity: .9; animation: spin 14s linear infinite; }
+  .hero[data-open="true"] .ring.r2 { animation-duration: 19s; animation-direction: reverse; }
+  @keyframes spin { to { --a: 360deg; } }
+  .halo {
+    position: absolute; left: 50%; top: 52%; width: calc(var(--u) * .9); height: calc(var(--u) * .7); z-index: 0;
+    transform: translate(-50%, -50%); border-radius: 50%; opacity: 0; transition: opacity .6s;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(205,238,219,.9), rgba(246,217,127,.35) 55%, rgba(246,217,127,0) 75%);
+    filter: blur(14px);
+  }
+  .hero[data-open="true"] .halo { opacity: 1; }
+
+  /* floating battery bubbles: hidden inside the case, burst out when it opens */
+  .bubble {
+    position: absolute; z-index: 3; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    width: var(--s); height: var(--s); line-height: 1; gap: calc(var(--s) * .04);
+    background: radial-gradient(70% 70% at 35% 25%, rgba(255,255,255,.98), rgba(255,255,255,.82) 45%, rgba(230,246,236,.75) 100%);
+    border: 1.5px solid rgba(255,255,255,.95);
+    box-shadow: 0 12px 26px rgba(107,74,57,.12), 0 0 0 6px rgba(205,238,219,.35), 0 0 34px rgba(166,224,190,.55), inset 0 -8px 16px rgba(205,238,219,.6);
+    transition: transform .75s cubic-bezier(.2,1.55,.4,1), opacity .35s;
+    will-change: transform;
+  }
+  .bubble b { font-size: calc(var(--s) * .34); font-weight: 600; color: var(--green); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+  .bubble b small { font-size: .55em; font-weight: 500; margin-left: 1px; }
+  .bubble svg { width: calc(var(--s) * .28); height: calc(var(--s) * .28); }
+  .bubble.qC { --s: calc(var(--u) * .3);  left: 50%; top: calc(var(--u) * -.09); margin-left: calc(var(--s) / -2); --fx: 0px; --fy: calc(var(--u) * .4); }
+  .bubble.qL { --s: calc(var(--u) * .24); left: calc(var(--u) * -.035); top: calc(var(--u) * .2); --fx: calc(var(--u) * .4);  --fy: calc(var(--u) * .14); transition-delay: .07s; }
+  .bubble.qR { --s: calc(var(--u) * .24); right: calc(var(--u) * -.035); top: calc(var(--u) * .27); --fx: calc(var(--u) * -.4); --fy: calc(var(--u) * .1); transition-delay: .14s; }
+  .bubble[data-level="none"] { opacity: 0; transform: translate(var(--fx), var(--fy)) scale(.15); transition-duration: .35s, .3s; }
+  .bubble[data-level="mid"] b { color: var(--mid); }
+  .bubble[data-level="low"] b { color: var(--low); }
+  .bubble[data-level="mid"] { box-shadow: 0 12px 26px rgba(107,74,57,.12), 0 0 0 6px rgba(246,217,127,.35), 0 0 34px rgba(246,217,127,.6), inset 0 -8px 16px rgba(246,217,127,.45); }
+  .bubble[data-level="low"] { box-shadow: 0 12px 26px rgba(107,74,57,.12), 0 0 0 6px rgba(244,188,203,.4), 0 0 34px rgba(231,143,166,.55), inset 0 -8px 16px rgba(244,188,203,.5); }
+  .bubble::after {               /* glossy highlight */
+    content: ""; position: absolute; left: 18%; top: 10%; width: 36%; height: 22%; border-radius: 50%;
+    background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,0)); pointer-events: none;
+  }
+  .hero[data-open="true"] .bubble:not([data-level="none"]) { animation: bob 5s ease-in-out infinite; }
+  .hero[data-open="true"] .bubble.qL:not([data-level="none"]) { animation-delay: -1.6s; }
+  .hero[data-open="true"] .bubble.qR:not([data-level="none"]) { animation-delay: -3.1s; }
+  @keyframes bob { 0%,100% { translate: 0 0; } 50% { translate: 0 -6px; } }
+
+  /* ---------- battery cards ---------- */
+  .panel {
+    width: 100%; margin-top: calc(var(--u) * .08); padding: 14px; border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,252,246,.9), rgba(250,243,232,.9));
+    border: 1px solid var(--line); box-shadow: 0 16px 40px rgba(107,74,57,.1), inset 0 1px 0 #fff;
+  }
+  .cards { display: flex; gap: 10px; }
+  .card {
+    flex: 1; min-width: 0; text-align: center; padding: 14px 8px 12px; border-radius: 22px;
+    background: var(--paper); border: 1px solid #efe5d6;
+    box-shadow: 0 8px 20px rgba(107,74,57,.07), inset 0 1px 0 #fff;
+  }
+  .card:nth-child(3) { order: -1; }          /* CASE first, as on the reference; the DOM order stays L, R, C for the script */
+  .card.in { animation: pop .55s cubic-bezier(.2,1.5,.4,1); }
+  .card:nth-child(3).in { animation-delay: 0s; }
+  .card:nth-child(1).in { animation-delay: .06s; }
+  .card:nth-child(2).in { animation-delay: .12s; }
+  @keyframes pop { 0% { transform: translateY(12px) scale(.94); } 60% { transform: translateY(-4px) scale(1.04); } 100% { transform: none; } }
+  .card .icon {
+    width: 56px; height: 56px; margin: 0 auto 10px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    background: radial-gradient(70% 70% at 40% 30%, #fff, #f6eee1); border: 1px solid #ece0cf;
+    box-shadow: 0 6px 14px rgba(107,74,57,.08), inset 0 1px 0 #fff;
+  }
+  .card .icon svg { width: 28px; height: 28px; }
+  .card .who { font-family: inherit; font-size: 12px; font-weight: 400; letter-spacing: .22em; text-indent: .22em; color: var(--brown-2); text-transform: uppercase; }
+  .card .pct { min-height: 1.2em; font-size: 30px; font-weight: 600; letter-spacing: 0; line-height: 1.2; font-variant-numeric: tabular-nums; color: var(--green); }
+  .card .pct small { font-size: 15px; font-weight: 500; margin-left: 1px; }
+  .bar { height: 7px; border-radius: 4px; background: #efe6d8; overflow: hidden; margin-top: 8px; box-shadow: inset 0 1px 2px rgba(107,74,57,.08); }
+  .bar i { display: block; height: 100%; width: 0; border-radius: 4px; transition: width .5s cubic-bezier(.3,1,.4,1); background: linear-gradient(90deg, #8fd9ad, var(--green)); }
+  .card[data-level="mid"] .pct { color: var(--mid); }  .card[data-level="mid"] .bar i { background: linear-gradient(90deg, #f6d97f, var(--mid)); }
+  .card[data-level="low"] .pct { color: var(--low); }  .card[data-level="low"] .bar i { background: linear-gradient(90deg, #f4bccb, var(--low)); }
+  .card[data-level="none"] .pct { color: var(--muted); }
+
+  /* ---------- hint ---------- */
+  .hint {
+    margin: 18px 0 0; padding: 10px 22px; border-radius: 999px; text-align: center; font-size: 15px; color: var(--brown);
+    background: var(--paper); border: 1px solid var(--line); box-shadow: 0 8px 20px rgba(107,74,57,.08), inset 0 1px 0 #fff;
+    display: flex; align-items: center; gap: 10px; min-height: 42px;
+  }
+  .hint b { color: var(--green); font-weight: 500; }
+  .hint svg { width: 16px; height: 16px; flex: none; }
+
+  .foot {
+    margin-top: 16px; display: flex; flex-direction: column; align-items: center; gap: 4px;
+    color: var(--muted); font-size: 11px; letter-spacing: .04em; font-variant-numeric: tabular-nums; text-align: center;
+  }
+  .foot svg { width: 18px; height: 18px; margin-bottom: 2px; }
+
+  @media (min-width: 900px) {
+    :root { --u: min(400px, 44vh); }
+    .page { padding-top: 34px; }
+    h1 { font-size: 34px; letter-spacing: .34em; text-indent: .34em; }
+  }
+</style>
+</head>
+<body>
+
+<canvas id="fx"></canvas>
+
+<!-- ambient decoration: a few flowers, pearls and sparkles, kept sparse -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="flower">
+      <g fill="currentColor">
+        <ellipse cx="0" cy="-6" rx="3.2" ry="5"/><ellipse cx="0" cy="6" rx="3.2" ry="5"/>
+        <ellipse cx="-6" cy="0" rx="5" ry="3.2"/><ellipse cx="6" cy="0" rx="5" ry="3.2"/>
+        <ellipse cx="-4.3" cy="-4.3" rx="3.8" ry="3.8" transform="rotate(45 -4.3 -4.3)"/><ellipse cx="4.3" cy="4.3" rx="3.8" ry="3.8"/>
+        <ellipse cx="4.3" cy="-4.3" rx="3.8" ry="3.8"/><ellipse cx="-4.3" cy="4.3" rx="3.8" ry="3.8"/>
+      </g>
+      <circle r="2.4" fill="#f6d97f"/>
+    </g>
+    <g id="star"><path d="M0-7C0.6-2.6 2.6-.6 7 0 2.6.6.6 2.6 0 7-.6 2.6-2.6.6-7 0-2.6-.6-.6-2.6 0-7Z" fill="currentColor"/></g>
+    <radialGradient id="pearl" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fff"/><stop offset=".6" stop-color="#f3e8d6"/><stop offset="1" stop-color="#d8b57c"/></radialGradient>
+    <linearGradient id="leaf" x1="0" x2="1"><stop offset="0" stop-color="#bfe3c9"/><stop offset="1" stop-color="#8fc9a3"/></linearGradient>
+  </defs>
+</svg>
+<div class="deco" aria-hidden="true">
+  <svg style="left:4%;top:6%;color:#f4bccb" width="34" height="34" viewBox="-9 -9 18 18"><use href="#flower"/></svg>
+  <svg style="left:11%;top:3%;color:#f6d97f" width="22" height="22" viewBox="-9 -9 18 18"><use href="#flower"/></svg>
+  <svg style="right:5%;top:17%;color:#f4bccb" width="26" height="26" viewBox="-9 -9 18 18"><use href="#flower"/></svg>
+  <svg style="left:7%;top:38%;color:#fff" width="24" height="24" viewBox="-9 -9 18 18"><use href="#flower"/></svg>
+  <svg style="right:9%;top:42%;color:#f6d97f" width="20" height="20" viewBox="-9 -9 18 18"><use href="#flower"/></svg>
+  <svg style="left:3%;bottom:8%;color:#f4bccb" width="40" height="40" viewBox="-9 -9 18 18"><use href="#flower"/></svg>
+  <svg style="right:4%;bottom:6%;color:#f4bccb" width="36" height="36" viewBox="-9 -9 18 18"><use href="#flower"/></svg>
+  <svg style="right:14%;bottom:14%;color:#f6d97f" width="22" height="22" viewBox="-9 -9 18 18"><use href="#flower"/></svg>
+  <svg style="left:16%;bottom:22%;color:#fff" width="18" height="18" viewBox="-9 -9 18 18"><use href="#flower"/></svg>
+  <svg style="left:6%;bottom:30%" width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="url(#pearl)"/></svg>
+  <svg style="right:7%;top:62%" width="11" height="11" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="url(#pearl)"/></svg>
+  <svg style="left:20%;top:9%" width="9" height="9" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="url(#pearl)"/></svg>
+  <svg style="right:22%;bottom:9%" width="12" height="12" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="url(#pearl)"/></svg>
+  <svg style="left:2%;top:50%" width="30" height="30" viewBox="-5 -5 30 30"><path d="M0 20C4 8 12 2 24 0 20 12 12 18 0 20Z" fill="url(#leaf)"/></svg>
+  <svg style="right:2%;top:28%" width="26" height="26" viewBox="-5 -5 30 30" transform="scale(-1,1)"><path d="M0 20C4 8 12 2 24 0 20 12 12 18 0 20Z" fill="url(#leaf)"/></svg>
+  <svg class="sparkle" style="left:24%;top:16%;color:#f6d97f" width="16" height="16" viewBox="-8 -8 16 16"><use href="#star"/></svg>
+  <svg class="sparkle" style="right:20%;top:12%;color:#fff" width="12" height="12" viewBox="-8 -8 16 16"><use href="#star"/></svg>
+  <svg class="sparkle" style="left:12%;top:58%;color:#f6d97f" width="14" height="14" viewBox="-8 -8 16 16"><use href="#star"/></svg>
+  <svg class="sparkle" style="right:10%;top:52%;color:#f4bccb" width="12" height="12" viewBox="-8 -8 16 16"><use href="#star"/></svg>
+  <svg class="sparkle" style="right:28%;bottom:18%;color:#f6d97f" width="10" height="10" viewBox="-8 -8 16 16"><use href="#star"/></svg>
+</div>
+
+<main class="page">
+  <header class="head">
+    <h1>AIRPODS</h1>
+    <div class="rule"><i></i><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.2C.8 8.3 3 4.5 6.7 4.5c2 0 3.4 1 4.3 2.4 1-1.4 2.4-2.4 4.4-2.4 3.7 0 5.9 3.8 4.3 7.3C19.5 16.4 12 21 12 21Z" fill="#e8977f"/></svg><i></i></div>
+    <div class="sub"><b id="connword">Connected</b> · Yuyii</div>
+    <div class="opens" title="จำนวนครั้งที่เปิดฝา"><b id="opens">0</b><small>เปิดฝา</small></div>
+  </header>
+
+  <div class="status">
+    <span class="pill" id="conn">กำลังเชื่อมต่อ…</span>
+    <span class="dev" id="dev"></span>
+  </div>
+
+  <section class="hero" id="case" data-open="false">
+    <div class="halo"></div>
+    <div class="ring r1"></div>
+    <div class="ring r2"></div>
+    <div class="pedestal"></div>
+    <div class="casebox" role="img" aria-label="เคส AirPods ลายดอกไม้">
+      <div class="body"></div>
+      <div class="full"></div>
+      <div class="lid"></div>
+    </div>
+
+    <div class="bubble qC" id="qC" data-level="none">
+      <svg viewBox="0 0 32 20"><rect x="1.5" y="3" width="25" height="14" rx="4" fill="none" stroke="#2e8f5a" stroke-width="2"/><rect x="27.5" y="7" width="3" height="6" rx="1.2" fill="#2e8f5a"/><rect x="5" y="6.5" width="18" height="7" rx="2" fill="#2e8f5a"/></svg>
+      <b></b>
+    </div>
+    <div class="bubble qL" id="qL" data-level="none">
+      <svg viewBox="0 0 24 32"><path d="M9 3.5c3.6 0 6 2.6 6 6.2 0 2-.9 3.6-2.3 4.8l-.2 12.4c0 1.8-1.3 3.1-3 3.1s-3-1.3-3-3.1l-.2-12.2C4.6 13.5 3 11.6 3 9.7 3 6.1 5.4 3.5 9 3.5Z" fill="#1f5f3b"/></svg>
+      <b></b>
+    </div>
+    <div class="bubble qR" id="qR" data-level="none">
+      <svg viewBox="0 0 24 32"><path d="M15 3.5c-3.6 0-6 2.6-6 6.2 0 2 .9 3.6 2.3 4.8l.2 12.4c0 1.8 1.3 3.1 3 3.1s3-1.3 3-3.1l.2-12.2c1.7-1.2 3.3-3.1 3.3-5 0-3.6-2.4-6.2-6-6.2Z" fill="#1f5f3b"/></svg>
+      <b></b>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="cards" id="cards">
+      <div class="card" data-level="none">
+        <div class="icon"><svg viewBox="0 0 24 32"><path d="M9 4.5c3.3 0 5.5 2.3 5.5 5.5 0 1.8-.8 3.3-2.1 4.4v11.6c0 1.7-1.2 3-2.9 3s-2.9-1.3-2.9-3V14.4C5.3 13.3 3.5 11.8 3.5 10 3.5 6.8 5.7 4.5 9 4.5Z" fill="none" stroke="#6b4a39" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <div class="who">Left</div><div class="pct" id="pL"></div><div class="bar"><i id="bL"></i></div>
+      </div>
+      <div class="card" data-level="none">
+        <div class="icon"><svg viewBox="0 0 24 32"><path d="M15 4.5c-3.3 0-5.5 2.3-5.5 5.5 0 1.8.8 3.3 2.1 4.4v11.6c0 1.7 1.2 3 2.9 3s2.9-1.3 2.9-3V14.4c1.3-1.1 3.1-2.6 3.1-4.4 0-3.2-2.2-5.5-5.5-5.5Z" fill="none" stroke="#6b4a39" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <div class="who">Right</div><div class="pct" id="pR"></div><div class="bar"><i id="bR"></i></div>
+      </div>
+      <div class="card" data-level="none">
+        <div class="icon"><svg viewBox="0 0 32 32"><rect x="4" y="7" width="24" height="20" rx="6" fill="none" stroke="#6b4a39" stroke-width="1.8"/><path d="M4 14h24" stroke="#6b4a39" stroke-width="1.8"/><circle cx="16" cy="19.5" r="1.6" fill="#2e8f5a"/></svg></div>
+        <div class="who">Case</div><div class="pct" id="pC"></div><div class="bar"><i id="bC"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <p class="hint">
+    <svg viewBox="-9 -9 18 18" style="color:#f4bccb"><use href="#flower"/></svg>
+    <span id="hint">เปิดเคสเพื่อเช็กแบตเตอรี่</span>
+    <svg viewBox="-9 -9 18 18" style="color:#f6d97f"><use href="#flower"/></svg>
+  </p>
+
+  <footer class="foot">
+    <svg viewBox="-9 -9 18 18" style="color:#f6d97f"><use href="#flower"/></svg>
+    <span id="raw"></span>
+    <span>กด Space เพื่อดูหน้าตาโดยไม่ต้องแตะเคส</span>
+  </footer>
+</main>
+
+<script>
+'use strict';
+
+const el = (id) => document.getElementById(id);
+const ui = {
+  conn: el('conn'), dev: el('dev'), opens: el('opens'), hint: el('hint'),
+  case: el('case'), cards: el('cards'), raw: el('raw'),
+  pL: el('pL'), pR: el('pR'), pC: el('pC'),
+  bL: el('bL'), bR: el('bR'), bC: el('bC'),
+  qL: el('qL'), qR: el('qR'), qC: el('qC'),
+  connword: el('connword'),
+};
+
+let opens = 0;
+let revealed = false;   // battery stays hidden until the lid is actually opened
+
+function level(p) {
+  if (p === null || p === undefined) return 'none';
+  if (p >= 50) return 'good';
+  if (p >= 20) return 'mid';
+  return 'low';
+}
+
+function setCard(i, pct) {
+  const card = ui.cards.children[i];
+  const [num, bar] = [[ui.pL, ui.bL], [ui.pR, ui.bR], [ui.pC, ui.bC]][i];
+  const bubble = [ui.qL, ui.qR, ui.qC][i];          // the floating copy around the case
+  card.dataset.level = level(pct);
+  bubble.dataset.level = level(pct);
+  if (pct === null || pct === undefined) {
+    num.textContent = '';
+    bubble.querySelector('b').textContent = '';
+    bar.style.width = '0%';
+  } else {
+    num.innerHTML = `${pct}<small>%</small>`;
+    bubble.querySelector('b').innerHTML = `${pct}<small>%</small>`;
+    bar.style.width = `${Math.max(3, pct)}%`;
+  }
+}
+
+function showBattery(m, animate) {
+  // Left and right come straight from the nibbles of byte 6 and match what
+  // macOS itself reports. The case nibble has produced impossible values
+  // before, so anything over 100 is shown as unknown rather than guessed at.
+  const casePct = m.case !== null && m.case !== undefined && m.case <= 100 ? m.case : null;
+  setCard(0, m.left);
+  setCard(1, m.right);
+  setCard(2, casePct);
+
+  ui.raw.textContent = `byte6=${m.b6} byte7=${m.b7} byte8=${m.b8}`;
+
+  if (animate) {
+    for (const c of ui.cards.children) {
+      c.classList.remove('in');
+      void c.offsetWidth;
+      c.classList.add('in');
+    }
+  }
+}
+
+function openCase(m) {
+  opens++;
+  revealed = true;
+  ui.opens.textContent = opens;
+  ui.case.dataset.open = 'true';
+  ui.hint.innerHTML = m && m.left !== null
+    ? 'หูฟังพร้อมใช้'
+    : 'ยังไม่ได้ค่าแบต · ลองเปิดฝาค้างไว้สักครู่';
+  if (m) {
+    showBattery(m, true);
+    const casePct = m.case !== null && m.case !== undefined && m.case <= 100 ? m.case : null;
+    spray([m.left, m.right, casePct]);
+  } else {
+    spray([]);
+  }
+}
+
+function closeCase() {
+  ui.case.dataset.open = 'false';
+  // Lid shut: the numbers go away with it and come back on the next open.
+  revealed = false;
+  for (let i = 0; i < 3; i++) setCard(i, null);
+  ui.hint.innerHTML = 'ปิดแล้ว · <b>เปิดเคส</b>เพื่อเช็กแบตเตอรี่';
+}
+
+// ---------- the burst out of the case: flowers, petals, pearls and butterflies ----------
+const fx = document.getElementById('fx');
+const fctx = fx.getContext('2d');
+let fdpr = 1, FW = 0, FH = 0;
+function fxResize() {
+  fdpr = Math.min(2, window.devicePixelRatio || 1);
+  FW = window.innerWidth; FH = window.innerHeight;
+  fx.width = FW * fdpr; fx.height = FH * fdpr;
+}
+window.addEventListener('resize', fxResize);
+fxResize();
+
+const parts = [];
+const flies = [];
+const LEVEL_COLOR = { good: '#8fd9ad', mid: '#f6d97f', low: '#f4a3b8', none: '#efe1c6' };
+const FLORAL = ['#f4bccb', '#f6d97f', '#cdeedb', '#fff6ea', '#d8b57c', '#e8977f'];
+const FLOWER = ['#f7c3d1', '#fbe08f', '#ffffff', '#d9c7f2', '#f4a3b8', '#c9ebd6'];
+// upper wing, lower wing, edge: soft pastels to sit with the case's print
+const WINGS = [
+  ['#f8c6d4', '#fbe3ea', '#e48fa8'],
+  ['#fbe08f', '#fff1c4', '#d8b57c'],
+  ['#cdeedb', '#ecf9f1', '#7fc39b'],
+  ['#dccbf5', '#f1e9fc', '#a58ad6'],
+  ['#ffe2c7', '#fff4ea', '#e8977f'],
+];
+const rnd = (a, b) => a + Math.random() * (b - a);
+const pick = (arr) => arr[(Math.random() * arr.length) | 0];
+const reduceMotion = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function spray(pcts) {
+  const box = ui.case.getBoundingClientRect();
+  const ox = box.left + box.width / 2;
+  const oy = box.top + box.height * 0.5;           // the mouth of the case
+  const colours = pcts.filter((p) => p !== null && p !== undefined)
+                      .map((p) => LEVEL_COLOR[level(p)]);
+  const palette = colours.concat(FLORAL);
+  const k = reduceMotion ? 0.35 : 1;
+
+  // flowers and petals fan out wide from the mouth, then drift down swaying
+  for (let i = 0; i < 70 * k; i++) {
+    const kind = i % 3 === 0 ? 'flower' : (Math.random() < 0.7 ? 'petal' : 'pearl');
+    const ang = -Math.PI / 2 + rnd(-1.25, 1.25);
+    const speed = rnd(420, 980);
+    parts.push({
+      kind,
+      x: ox + rnd(-35, 35), y: oy + rnd(-12, 12),
+      vx: Math.cos(ang) * speed, vy: Math.sin(ang) * speed,
+      r: kind === 'flower' ? rnd(6, 11) : rnd(3.5, 8),
+      colour: kind === 'flower' ? pick(FLOWER) : pick(palette),
+      a: rnd(0, Math.PI * 2), spin: rnd(-6, 6),
+      sway: rnd(0, Math.PI * 2), t: 0, life: 1,
+    });
+  }
+
+  // butterflies take off from the case and wander up and away
+  const n = Math.round((reduceMotion ? 3 : rnd(7, 10)));
+  for (let i = 0; i < n && flies.length < 30; i++) {
+    const heading = -Math.PI / 2 + (i / Math.max(1, n - 1) - 0.5) * 2.4 + rnd(-0.2, 0.2);
+    flies.push({
+      x: ox + rnd(-30, 30), y: oy + rnd(-10, 10),
+      heading, speed: rnd(85, 135),
+      size: rnd(16, 25),
+      wing: pick(WINGS),
+      flap: rnd(0, Math.PI * 2), flapRate: rnd(15, 21),
+      wander: rnd(0, Math.PI * 2), wanderRate: rnd(1.4, 2.6),
+      t: 0, ttl: rnd(4.8, 6.4), delay: i * 0.06,
+    });
+  }
+}
+
+function drawFlower(r, colour) {
+  fctx.fillStyle = colour;
+  for (let j = 0; j < 5; j++) {
+    fctx.save();
+    fctx.rotate((j / 5) * Math.PI * 2);
+    fctx.beginPath(); fctx.ellipse(0, -r * 0.55, r * 0.42, r * 0.6, 0, 0, Math.PI * 2); fctx.fill();
+    fctx.restore();
+  }
+  fctx.fillStyle = 'rgba(214,170,90,.35)';
+  fctx.beginPath(); fctx.arc(0, 0, r * 0.36, 0, Math.PI * 2); fctx.fill();
+  fctx.fillStyle = '#f6c94f';
+  fctx.beginPath(); fctx.arc(0, 0, r * 0.26, 0, Math.PI * 2); fctx.fill();
+}
+
+function drawButterfly(b) {
+  const s = b.size;
+  const open = 0.18 + 0.82 * Math.abs(Math.sin(b.flap));   // wings fold in and out
+  const [upper, lower, edge] = b.wing;
+  for (const side of [-1, 1]) {
+    fctx.save();
+    fctx.scale(side * open, 1);
+    // upper wing
+    let g = fctx.createLinearGradient(0, 0, s, -s);
+    g.addColorStop(0, lower); g.addColorStop(1, upper);
+    fctx.fillStyle = g; fctx.strokeStyle = edge; fctx.lineWidth = 0.8;
+    fctx.beginPath();
+    fctx.moveTo(0, -s * 0.1);
+    fctx.bezierCurveTo(s * 0.35, -s * 0.95, s * 1.15, -s * 0.85, s * 0.95, -s * 0.2);
+    fctx.bezierCurveTo(s * 0.85, s * 0.05, s * 0.35, s * 0.08, 0, s * 0.02);
+    fctx.fill(); fctx.stroke();
+    // lower wing
+    g = fctx.createLinearGradient(0, 0, s * 0.7, s * 0.8);
+    g.addColorStop(0, lower); g.addColorStop(1, upper);
+    fctx.fillStyle = g;
+    fctx.beginPath();
+    fctx.moveTo(0, s * 0.02);
+    fctx.bezierCurveTo(s * 0.55, s * 0.05, s * 0.85, s * 0.45, s * 0.55, s * 0.72);
+    fctx.bezierCurveTo(s * 0.35, s * 0.9, s * 0.1, s * 0.55, 0, s * 0.25);
+    fctx.fill(); fctx.stroke();
+    // a pearly dot on each upper wing
+    fctx.fillStyle = 'rgba(255,255,255,.85)';
+    fctx.beginPath(); fctx.arc(s * 0.62, -s * 0.42, s * 0.09, 0, Math.PI * 2); fctx.fill();
+    fctx.restore();
+  }
+  // body and antennae
+  fctx.fillStyle = '#6b4a39';
+  fctx.beginPath(); fctx.ellipse(0, s * 0.05, s * 0.07, s * 0.38, 0, 0, Math.PI * 2); fctx.fill();
+  fctx.strokeStyle = '#6b4a39'; fctx.lineWidth = 0.9;
+  fctx.beginPath();
+  fctx.moveTo(0, -s * 0.3); fctx.quadraticCurveTo(-s * 0.12, -s * 0.6, -s * 0.24, -s * 0.66);
+  fctx.moveTo(0, -s * 0.3); fctx.quadraticCurveTo(s * 0.12, -s * 0.6, s * 0.24, -s * 0.66);
+  fctx.stroke();
+}
+
+let flast = performance.now();
+function fxFrame(now) {
+  const dt = Math.min(0.05, (now - flast) / 1000);
+  flast = now;
+  fctx.save();
+  fctx.scale(fdpr, fdpr);
+  fctx.clearRect(0, 0, FW, FH);
+
+  for (const p of parts) {
+    p.t += dt;
+    // heavy at first so the burst arcs, then air takes over and they float down
+    p.vy += (p.kind === 'pearl' ? 1500 : 900) * dt;
+    const drag = p.kind === 'pearl' ? 0.6 : 2.2;
+    p.vx *= 1 - Math.min(0.9, drag * dt);
+    if (p.kind !== 'pearl') {
+      p.vy = Math.min(p.vy, 150);                    // terminal velocity: flowers drift
+      p.vx += Math.sin(p.t * 3 + p.sway) * 120 * dt; // and sway as they fall
+    }
+    p.x += p.vx * dt; p.y += p.vy * dt; p.a += p.spin * dt;
+    if (p.y > FH + 60 || p.t > 7) p.life = 0;
+    const alpha = p.t > 5.5 ? Math.max(0, 1 - (p.t - 5.5) / 1.5) : 1;
+    fctx.save();
+    fctx.globalAlpha = alpha;
+    fctx.translate(p.x, p.y); fctx.rotate(p.a);
+    fctx.fillStyle = p.colour;
+    if (p.kind === 'flower') {
+      drawFlower(p.r, p.colour);
+    } else if (p.kind === 'petal') {
+      fctx.beginPath(); fctx.ellipse(0, 0, p.r * 1.3, p.r * 0.7, 0, 0, Math.PI * 2); fctx.fill();
+    } else {
+      fctx.beginPath(); fctx.arc(0, 0, p.r * 0.75, 0, Math.PI * 2); fctx.fill();
+      fctx.fillStyle = 'rgba(255,255,255,.75)';
+      fctx.beginPath(); fctx.arc(-p.r * 0.25, -p.r * 0.25, p.r * 0.25, 0, Math.PI * 2); fctx.fill();
+    }
+    fctx.restore();
+  }
+  for (let i = parts.length - 1; i >= 0; i--) if (!parts[i].life) parts.splice(i, 1);
+
+  for (const b of flies) {
+    b.t += dt;
+    if (b.t < b.delay) continue;
+    const age = b.t - b.delay;
+    b.flap += b.flapRate * dt;
+    b.wander += b.wanderRate * dt;
+    // a quick launch out of the case, then a lazy fluttering drift upward
+    const launch = age < 0.45 ? 1 + 2.6 * (1 - age / 0.45) : 1;
+    b.heading += Math.sin(b.wander) * 2.4 * dt;
+    b.heading += (-Math.PI / 2 - b.heading) * 0.12 * dt;   // keep a gentle upward bias
+    const bob = Math.sin(b.flap * 0.5) * 18;
+    b.x += Math.cos(b.heading) * b.speed * launch * dt;
+    b.y += (Math.sin(b.heading) * b.speed * launch + bob) * dt;
+    const grow = Math.min(1, age / 0.35);
+    const fade = age > b.ttl - 0.9 ? Math.max(0, (b.ttl - age) / 0.9) : 1;
+    fctx.save();
+    fctx.globalAlpha = fade;
+    fctx.translate(b.x, b.y);
+    fctx.rotate(b.heading + Math.PI / 2);
+    fctx.scale(grow, grow);
+    fctx.shadowColor = 'rgba(255,255,255,.8)'; fctx.shadowBlur = 8;
+    drawButterfly(b);
+    fctx.restore();
+  }
+  for (let i = flies.length - 1; i >= 0; i--) {
+    const b = flies[i];
+    if (b.t - b.delay > b.ttl || b.y < -80 || b.x < -80 || b.x > FW + 80) flies.splice(i, 1);
+  }
+
+  fctx.restore();
+  requestAnimationFrame(fxFrame);
+}
+requestAnimationFrame(fxFrame);
+
+// ---------- connection ----------
+let ws = null, retry = 0;
+function connect() {
+  // carry the page's ?k= key (phones on the LAN need it) over to the live feed
+  ws = new WebSocket(`ws://${location.host}/ws${location.search}`);
+  ws.onopen = () => { retry = 0; setConn(true, 'รอฝาเคส'); };
+  ws.onmessage = (e) => {
+    let m; try { m = JSON.parse(e.data); } catch { return; }
+    if (!m.seen) { setConn(true, 'เคสยังหลับ · ขยับฝาทีนึง'); return; }
+
+    ui.dev.textContent = `${m.device} · ${m.rssi} dBm`;
+    setConn(true, m.closed ? 'ฝาปิด' : 'ฝาเปิดอยู่');
+
+    if (m.type === 'lid') {
+      // The scanner has already collapsed the two pods' reports into one
+      // action, so follow it instead of re-deriving it from the last state seen.
+      if (m.action === 'opened') openCase(m);
+      else if (m.action === 'closed') closeCase();
+      else if (m.closed === false && revealed) showBattery(m, false);
+    } else {
+      // Snapshots and "seen" carry the lid state the scanner believes: keep the
+      // drawing in step with it (first sight, or after a missed event) and the
+      // numbers fresh while the lid stays open.
+      ui.case.dataset.open = m.closed ? 'false' : 'true';
+      if (m.closed === false && revealed) showBattery(m, false);
+      else if (m.b6) ui.raw.textContent = `byte6=${m.b6} byte7=${m.b7} byte8=${m.b8}`;
+    }
+  };
+  ws.onclose = () => {
+    setConn(false, 'สแกนเนอร์หลุด');
+    retry = Math.min(retry + 1, 6);
+    setTimeout(connect, 400 * retry);
+  };
+  ws.onerror = () => {};
+}
+function setConn(ok, t) {
+  ui.conn.className = 'pill ' + (ok ? 'live' : 'dead');
+  ui.conn.textContent = t;
+  ui.connword.textContent = ok ? 'Connected' : 'Offline';
+}
+
+window.addEventListener('keydown', (e) => {
+  if (e.code !== 'Space') return;
+  e.preventDefault();
+  if (ui.case.dataset.open === 'true') { closeCase(); return; }
+  openCase({ left: 90, right: 80, case: 60, b6: '0x98', b7: '0x6F', b8: '0x11' });
+});
+
+connect();
+</script>
+</body>
+</html>
